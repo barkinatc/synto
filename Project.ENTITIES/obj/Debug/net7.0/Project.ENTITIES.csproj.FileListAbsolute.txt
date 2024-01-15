@@ -1,0 +1,12 @@
+C:\Users\user\Desktop\themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template\Synto-MVC\Project.ENTITIES\bin\Debug\net7.0\Project.ENTITIES.deps.json
+C:\Users\user\Desktop\themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template\Synto-MVC\Project.ENTITIES\bin\Debug\net7.0\Project.ENTITIES.dll
+C:\Users\user\Desktop\themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template\Synto-MVC\Project.ENTITIES\bin\Debug\net7.0\Project.ENTITIES.pdb
+C:\Users\user\Desktop\themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template\Synto-MVC\Project.ENTITIES\obj\Debug\net7.0\Project.ENTITIES.csproj.AssemblyReference.cache
+C:\Users\user\Desktop\themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template\Synto-MVC\Project.ENTITIES\obj\Debug\net7.0\Project.ENTITIES.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Desktop\themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template\Synto-MVC\Project.ENTITIES\obj\Debug\net7.0\Project.ENTITIES.AssemblyInfoInputs.cache
+C:\Users\user\Desktop\themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template\Synto-MVC\Project.ENTITIES\obj\Debug\net7.0\Project.ENTITIES.AssemblyInfo.cs
+C:\Users\user\Desktop\themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template\Synto-MVC\Project.ENTITIES\obj\Debug\net7.0\Project.ENTITIES.csproj.CoreCompileInputs.cache
+C:\Users\user\Desktop\themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template\Synto-MVC\Project.ENTITIES\obj\Debug\net7.0\Project.ENTITIES.dll
+C:\Users\user\Desktop\themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template\Synto-MVC\Project.ENTITIES\obj\Debug\net7.0\refint\Project.ENTITIES.dll
+C:\Users\user\Desktop\themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template\Synto-MVC\Project.ENTITIES\obj\Debug\net7.0\Project.ENTITIES.pdb
+C:\Users\user\Desktop\themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template\Synto-MVC\Project.ENTITIES\obj\Debug\net7.0\ref\Project.ENTITIES.dll
