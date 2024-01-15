@@ -1,0 +1,237 @@
+﻿@model AdminChoseVM
+@{
+    ViewData["Title"] = "ChoosePageIndex";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section Css {
+
+
+    <!-- Dragula CSS -->
+
+    <style>
+        .outer-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 6px;
+        }
+
+        .dragula-container {
+            border: 2px dashed #ccc;
+            padding: 10px;
+            min-height: 200px;
+        }
+
+        .draggable-item {
+            padding: 5px;
+            border: 1px solid #ddd;
+            margin-bottom: 5px;
+            background-color: #f8f9fa;
+            cursor: move;
+        }
+
+        .box {
+        }
+    </style>
+
+
+}
+<div class="content">
+   
+    <!-- Start::main-content -->
+    <div class="main-content">
+
+        <!-- Page Header -->
+        <div class="block justify-between page-header sm:flex">
+            <div>
+                <h3 class="text-gray-700 hover:text-gray-900 dark:text-white dark:hover:text-white text-2xl font-medium">
+                    
+                </h3>
+            </div>
+            <ol class="flex items-center whitespace-nowrap min-w-0">
+                <li class="text-sm">
+                    <a class="flex items-center font-semibold text-primary hover:text-primary dark:text-primary truncate" href="javascript:void(0);">
+                        Pages
+                        <i class="ti ti-chevrons-right flex-shrink-0 mx-3 overflow-visible text-gray-300 dark:text-gray-300 rtl:rotate-180"></i>
+                    </a>
+                </li>
+                <li class="text-sm text-gray-500 hover:text-primary dark:text-white/70 " aria-current="page">
+
+                </li>
+            </ol>
+        </div>
+       
+        <!-- Page Header Close -->
+
+        <!-- Start::row-1 -->
+
+        <form id="create-page-form" action="/Admin/Page/ChoosePageIndex" method="post">
+            <div id="hidden-inputs-container">
+               
+            </div>
+            
+            <div class="outer-grid grid grid-cols-2 gap-6">
+
+                <div class="box">
+                    <div class="box-header">
+                        <h5 class="box-title">Default Offcanvas Left</h5>
+                    </div>
+                    <div class="box-body">
+                        <div id="left" class="dragula-container">
+                            <div draggable="true" name="resimm"  id=0 class="draggable-item resim-item">Resim </div>
+                            <div draggable="true" name="yazıı" id=1 class="draggable-item yazi-item">Yazı </div>
+                            <div draggable="true" name="dataa" id=2 class="draggable-item data-item">Data </div>
+                        </div>
+
+                        <button type="submit" class="ti-btn ti-btn-primary">Ekle</button>
+
+                    </div>
+                </div>
+
+                <div class="box">
+                    <div class="box-header">
+                        <h5 class="box-title">Default Offcanvas Right</h5>
+                    </div>
+                    <div class="box-body">
+                        <div id="right" class="dragula-container">
+                            @{
+                                var pages = ViewBag.Pages as List<AdminPageVM>;
+                            }
+                            @if (pages.Count>0)
+                            {
+                                @foreach (var item in pages.OrderBy(x => x.Order))
+                                {
+
+                                    if (item.PageType == 0)
+                                    {
+                                        <div class="dragula-container">
+                                            resim
+                                        </div>
+
+                                    }
+                                    else if (item.PageType == 1)
+                                    {
+
+                                        <div class="dragula-container ">
+                                            yazı
+                                        </div>
+                                    }
+                                    else
+                                    {
+
+                                        <div class="dragula-container ">
+                                            data
+                                        </div>
+                                    }
+                                }
+                            }
+                        </div>
+
+                        @*  @if (Model.PagesVM.Count >0)
+                        {
+
+                            
+
+                            @foreach (var item in Model.OrderBy(x => x.Order))
+                            {
+
+                                if (item.PageType == 0)
+                                {
+                                    <div  class="dragula-container">
+                                        resim
+                                    </div>
+
+                                }
+                                else if (item.PageType == 1)
+                                {
+
+                                    <div  class="dragula-container ">
+                                        yazı
+                                    </div>
+                                }
+                                else
+                                {
+
+                                    <div  class="dragula-container ">
+                                        data
+                                    </div>
+                                }
+                            }
+                            </div>
+
+                        } *@
+                       
+                    </div>
+                </div>
+            </div>
+
+        </form>
+           
+        
+    </div>
+
+
+
+</div>
+
+@section scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.3/dragula.min.js"></script>
+    <script>
+        var drake = dragula([document.getElementById('left'), document.getElementById('right')], {
+            copy: true,
+            copySortSource: false,
+            accepts: function (el, target) {
+                return target !== document.getElementById('left');
+                console.log();
+            }
+        });
+        
+        drake.on('drop', function (el, target, source, sibling) {
+            
+            if (target === document.getElementById('right')) {
+                const container = document.getElementById('right');
+                Array.from(container.children).forEach((child, index) => {
+                    console.log(`ID: ${child.id}, Sıra: ${index}`);
+                });
+            }
+        });
+
+        function updateHiddenInputs() {
+            const container = document.getElementById('right'); 
+            const hiddenInputsContainer = document.getElementById('hidden-inputs-container');
+            hiddenInputsContainer.innerHTML = ''; 
+
+            Array.from(container.children).forEach((child, index) => {
+                
+                const inputForId = createHiddenInput(`Items[${index}].Id`, child.id);
+                const inputForOrder = createHiddenInput(`Items[${index}].Order`, index);
+                const inputForName = createHiddenInput(`Items[${index}].Name`, child.textContent.trim());
+
+                
+                hiddenInputsContainer.appendChild(inputForId);
+                hiddenInputsContainer.appendChild(inputForOrder);
+                hiddenInputsContainer.appendChild(inputForName);
+            });
+        }
+
+        function createHiddenInput(name, value) {
+            const input = document.createElement('input');
+            input.type = 'hidden';
+            input.name = name;
+            input.value = value;
+            return input;
+        }
+
+        // Sürükle-bırak ve sayfa yükleme işlemi sonrası bu fonksiyonu çağır
+        drake.on('drop', updateHiddenInputs);
+        document.addEventListener('DOMContentLoaded', updateHiddenInputs);
+
+
+        
+     
+    </script>
+
+
+
+
+}
+

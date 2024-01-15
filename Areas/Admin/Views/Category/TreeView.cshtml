@@ -1,0 +1,103 @@
+﻿
+@{
+    ViewData["Title"] = "TreeView";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Css {
+    <link id="style" href="~/assets/libs/treeview/treeview.min.css" rel="stylesheet" asp-append-version="true">
+
+
+
+}
+<div class="content">
+
+    <!-- Start::main-content -->
+    <div class="main-content">
+
+        <!-- Page Header -->
+        <div class="block justify-between page-header sm:flex">
+            <div>
+                <h3 class="text-gray-700 hover:text-gray-900 dark:text-white dark:hover:text-white text-2xl font-medium"> TreeView</h3>
+            </div>
+            <ol class="flex items-center whitespace-nowrap min-w-0">
+                <li class="text-sm">
+                    <a class="flex items-center font-semibold text-primary hover:text-primary dark:text-primary truncate" href="javascript:void(0);">
+                        Pages
+                        <i class="ti ti-chevrons-right flex-shrink-0 mx-3 overflow-visible text-gray-300 dark:text-gray-300 rtl:rotate-180"></i>
+                    </a>
+                </li>
+                <li class="text-sm text-gray-500 hover:text-primary dark:text-white/70 " aria-current="page">
+
+                </li>
+            </ol>
+        </div>
+        <!-- Page Header Close -->
+        <!-- Start::row-1 -->
+        <div class="grid grid-cols-12 gap-6">
+            <div class="col-span-12">
+                <div class="box">
+                    <div class="box-body">
+                    </div>
+                    <div id="categoryTree" class="treeview">
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End::row-1 -->
+
+    </div>
+    <!-- Start::main-content -->
+
+</div>
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.11/themes/default/style.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.11/jstree.min.js"></script>
+<script>
+
+
+
+    $(function () {
+        
+        var nodesData = @Html.Raw(Json.Serialize(Model.AdminTreeViewVMs));
+
+        $('#categoryTree').jstree({
+            'core': {
+                'data': nodesData,
+                'check_callback': true, 
+            },
+            "plugins": ["wholerow", "dnd"] 
+        });
+
+        $('#categoryTree').on('move_node.jstree', function (e, data) {
+            var oldParent = data.old_parent;
+            var newParent = data.parent;
+            var movedNodeId = data.node.id
+            var newPosition = data.position;
+            
+            $.ajax({
+                url: '/Admin/Category/MoveCategory', 
+                type: 'POST',   
+                dataType: 'json',
+                data: {
+                    'id': movedNodeId.replace('cat', '').replace('subcat', ''),
+                    'newParentId': newParent.replace('cat', ''), 
+                    'oldParentId': oldParent.replace('cat', ''), 
+                    'position': newPosition
+                },
+                success: function (response) {
+                    
+                },
+                error: function (error) {
+                   
+                }
+            });
+        });
+    });
+
+
+</script>

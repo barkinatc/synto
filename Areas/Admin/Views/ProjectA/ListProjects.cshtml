@@ -1,0 +1,109 @@
+﻿@model AdminProjectPageVM
+@{
+    ViewData["Title"] = "ListProjects";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="content">
+
+    <!-- Start::main-content -->
+    <div class="main-content">
+
+        <!-- Page Header -->
+        <div class="block justify-between page-header sm:flex">
+            <div>
+                <h3 class="text-gray-700 hover:text-gray-900 dark:text-white dark:hover:text-white text-2xl font-medium"> Projeler</h3>
+            </div>
+            <ol class="flex items-center whitespace-nowrap min-w-0">
+                <li class="text-sm">
+                    <a class="flex items-center font-semibold text-primary hover:text-primary dark:text-primary truncate" href="javascript:void(0);">
+                        Sayfalar
+                        <i class="ti ti-chevrons-right flex-shrink-0 mx-3 overflow-visible text-gray-300 dark:text-gray-300 rtl:rotate-180"></i>
+                    </a>
+                </li>
+                <li class="text-sm text-gray-500 hover:text-primary dark:text-white/70 " aria-current="page">
+
+                </li>
+            </ol>
+        </div>
+        <!-- Page Header Close -->
+        <!-- Start::row-1 -->
+        <!-- End::row-1 -->
+        <!-- Start::main-content -->
+        <div class="form-container" style="max-width: 400px; margin-right: 0 auto;">
+            <form action="/Admin/ProjectA/AddProject" method="post">
+                <div class="col-span-12 lg:col-span-4">
+                    <div class="box">
+                        <div class="box-header">
+                            <h5 class="box-title">Proje ekleme</h5>
+                        </div>
+                        <div class="box-body">
+                            <label for="input-label" class="ti-form-label">Proje</label>
+                            <input type="text" class="ti-form-input" placeholder="Proje adı giriniz" required asp-for="@Model.ProjectVM.Name">
+
+                        </div>
+                        <div>
+                            <button type="submit" class="ti-btn ti-btn-primary">Ekle</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+      
+
+        <!-- End::row-1 -->
+
+
+        <div class="grid grid-cols-12 gap-6">
+            <div class="col-span-12 lg:col-span-6">
+                <div class="box">
+                    <div class="box-header">
+                        <h5 class="box-title">Projelerin Listesi</h5>
+                    </div>
+                    <div class="box-body p-0">
+                        <div class="overflow-auto">
+                            <table class="ti-custom-table ti-custom-table-head ti-custom-table-hover">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Proje adı</th>
+
+                                        <th scope="col" class="!text-end">Action</th>
+                                        <th scope="col" class="!text-end">Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var item in Model.ProjectVMs)
+                                    {
+                                        <tr>
+                                            <td class="font-medium">@item.Name</td>
+
+                                            <td class="text-end font-medium">
+                                                <a class="text-warning hover:text-primary" href="/Admin/ProjectA/ProjectTreeView/@item.ID">Proje Agacı Oluştur</a>
+                                            </td>
+                                            <td class="text-end font-medium">
+                                                <a class="text-danger hover:text-primary" href="/Admin/Project/DeleteProject/@item.ID">Sil</a>
+                                            </td>
+                                        </tr>
+                                    }
+
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <script src="~/assets/libs/dragula/dragula.min.js"></script>
+    <script src="~/assets/js/draggable.js"></script>
+
+

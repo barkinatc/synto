@@ -1,0 +1,60 @@
+﻿@model AdminInstitutionVM
+@{
+    ViewData["Title"] = "UpdateInstitution";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>UpdateInstitution</h1>
+@section Css {
+
+
+
+}
+<div class="content">
+
+    <!-- Start::main-content -->
+    <div class="main-content">
+
+        <!-- Page Header -->
+        <div class="block justify-between page-header sm:flex">
+            <div>
+                <h1 class="text-gray-700 hover:text-gray-900 dark:text-white dark:hover:text-white text-2xl font-medium"> Kurumlar</h1>
+            </div>
+
+        </div>
+        <!-- Page Header Close -->
+        <!-- Start::row-1 -->
+        <!-- End::row-1 -->
+
+    </div>
+
+    <form method="post" >
+
+
+
+        <div class="grid grid-cols-12 gap-6">
+            <div class="col-span-12 lg:col-span-4">
+                <div class="box">
+                    <div class="box-header">
+                        <h5 class="box-title">Kurum Adı Güncelle</h5>
+                    </div>
+                    <div class="box-body">
+                        <div class="max-w-sm space-y-3">
+                            <input type="text" class="ti-form-input" asp-for="@Model.Name">
+                            
+                        </div>
+                    </div>
+                    <div>
+                        <button type="submit" class="badge bg-warning text-white">
+                            Güncelle
+                        </button>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+
+
+       
+</form>
+</div>

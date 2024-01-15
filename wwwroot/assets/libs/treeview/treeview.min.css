@@ -1,0 +1,73 @@
+﻿body {
+    .treeview
+
+{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    max-width: 350px;
+    margin: 20px;
+    background-color: #f9f9f9;
+}
+
+.treeview ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.treeview li {
+    margin: 5px 0;
+    position: relative;
+}
+
+    .treeview li::before {
+        content: "";
+        position: absolute;
+        top: 20px;
+        left: -20px;
+        border-left: 1px dashed #ccc;
+        border-bottom: 1px dashed #ccc;
+        width: 20px;
+        height: 0;
+    }
+
+    .treeview li::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: -20px;
+        border-left: 1px dashed #ccc;
+        bottom: 50%;
+    }
+
+    .treeview li:last-child::after {
+        display: none;
+    }
+
+/* İç içe ul'ler için stil */
+.treeview ul ul::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    border-left: 1px dashed #ccc;
+    top: 0;
+    bottom: 0;
+}
+
+.treeview a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+    .treeview a:hover {
+        text-decoration: underline;
+    }
+
+.treeview .jstree-anchor {
+    padding-left: 5px;
+}
+
+.treeview .jstree-themeicon {
+    display: none; /* İkonları kaldır */
+}
+}

@@ -1,0 +1,132 @@
+﻿@model AdminProjectPageVM
+
+@{
+    ViewData["Title"] = "ProjectTreeView";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section Css {
+    <link id="style" href="~/assets/libs/treeview/treeview.min.css" rel="stylesheet" asp-append-version="true">
+
+
+
+}
+<div class="content">
+
+    <!-- Start::main-content -->
+    <div class="main-content">
+
+        <!-- Page Header -->
+        <div class="block justify-between page-header sm:flex">
+            <div>
+                <h3 class="text-gray-700 hover:text-gray-900 dark:text-white dark:hover:text-white text-2xl font-medium"> Sayfa Ağacı</h3>
+            </div>
+            <ol class="flex items-center whitespace-nowrap min-w-0">
+                <li class="text-sm">
+                    <a class="flex items-center font-semibold text-primary hover:text-primary dark:text-primary truncate" href="javascript:void(0);">
+                        Pages
+                        <i class="ti ti-chevrons-right flex-shrink-0 mx-3 overflow-visible text-gray-300 dark:text-gray-300 rtl:rotate-180"></i>
+                    </a>
+                </li>
+                <li class="text-sm text-gray-500 hover:text-primary dark:text-white/70 " aria-current="page">
+
+                </li>
+            </ol>
+        </div>
+        <!-- Page Header Close -->
+        <!-- Start::row-1 -->
+        <div class="form-container" style="max-width: 400px; margin-right: 0 auto;">
+            <form action="/Admin/ProjectA/AddCategory/@Model.ProjectVM.ID" method="post">
+                <div class="col-span-12 lg:col-span-4">
+                    <div class="box">
+                        <div class="box-header">
+                            <h5 class="box-title">Bu Proje için Sayfa ekleme</h5>
+                        </div>
+                        <div class="box-body">
+                            <label for="input-label" class="ti-form-label">Sayfa</label>
+                            <input type="text" class="ti-form-input" placeholder="Sayfa adı giriniz" required asp-for="@Model.AdminCategoryVM.Name">
+
+                        </div>
+                        <div>
+                            <button type="submit" class="ti-btn ti-btn-primary">Ekle</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="grid grid-cols-12 gap-6">
+            <div class="col-span-6">
+                <div class="box">
+                    <div class="box-body">
+                        <h5>Sayfa Düzenleme</h5>
+                    </div>
+                    <div id="projectTree" class="treeview">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- End::row-1 -->
+
+    </div>
+    <!-- Start::main-content -->
+
+</div>
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.11/themes/default/style.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jstree/3.3.11/jstree.min.js"></script>
+<script>
+
+
+
+    $(function () {
+
+        var nodesData = @Html.Raw(Json.Serialize(Model.AdminTreeViewVMs));
+
+        $('#projectTree').jstree({
+            'core': {
+                'data': nodesData,
+                'check_callback': true,
+            },
+            "plugins": ["wholerow", "dnd"]
+        });
+        $('#projectTree').on('move_node.jstree', function (e, data) {
+            var oldParent = data.old_parent;
+            var newParent = data.parent;
+            var movedNodeId = data.node.id
+            
+
+            $.ajax({
+                url: '/Admin/Category/MoveCategory',
+                type: 'POST',
+                dataType: 'json',
+                data: {
+                    'id': movedNodeId,
+                    'newParentId': newParent,
+                    'oldParentId': oldParent
+                    
+                },
+                success: function (response) {
+
+                },
+                error: function (error) {
+
+                }
+            });
+        });
+
+        $('#projectTree').on('dblclick.jstree', function (e, data) {
+            var category = $(e.target).closest("li");
+            var categoryID = category[0].id; 
+            
+            
+            window.location.href = '/Admin/Page/ChoosePageIndex/' + categoryID;
+        });
+       
+    });
+
+
+</script>

@@ -1,0 +1,111 @@
+.gu-mirror{position:fixed!important;margin:0!important;z-index:9999!important;opacity:.8}.gu-hide{display:none!important}.gu-unselectable{-webkit-user-select:none!important;-moz-user-select:none!important;-ms-user-select:none!important;user-select:none!important}.gu-transit{opacity:.2}
+
+.content-table {
+    width: 100%; /* Ýstediðiniz geniþliði verebilirsiniz, veya kaldýrabilirsiniz. */
+    font-family: sans-serif; /* Font tipinizi seçebilirsiniz. */
+}
+
+    .content-table h2 {
+        text-align: left; /* Baþlýðý sola hizalama */
+        font-size: 24px; /* Baþlýk font büyüklüðü */
+    }
+
+    .content-table ul {
+        list-style: none; /* Liste iþaretlerini kaldýrma */
+        padding: 0;
+        margin: 0;
+    }
+
+    .content-table li {
+        margin-bottom: 5px; /* Liste öðeleri arasýnda boþluk */
+        line-height: 1.6; /* Satýr yüksekliði */
+        font-size: 16px; /* Yazý font büyüklüðü */
+    }
+
+    .content-table span.page-number {
+        float: right; /* Sayfa numarasýný saða hizalama */
+        font-weight: bold; /* Sayfa numarasýný kalýn yapma */
+    }
+
+    /* Alt listeler için stil */
+    .content-table ul ul {
+        padding-left: 20px; /* Alt listeler için iç boþluk */
+    }
+
+        .content-table ul ul li {
+            font-size: 14px; /* Alt liste yazý font büyüklüðü */
+        }
+
+body {
+    .treeview
+
+{
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    max-width: 350px;
+    margin: 20px;
+    background-color: #f9f9f9;
+}
+
+.treeview ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.treeview li {
+    margin: 5px 0;
+    position: relative;
+}
+
+    .treeview li::before {
+        content: "";
+        position: absolute;
+        top: 20px;
+        left: -20px;
+        border-left: 1px dashed #ccc;
+        border-bottom: 1px dashed #ccc;
+        width: 20px;
+        height: 0;
+    }
+
+    .treeview li::after {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: -20px;
+        border-left: 1px dashed #ccc;
+        bottom: 50%;
+    }
+
+    .treeview li:last-child::after {
+        display: none;
+    }
+
+/* Ýç içe ul'ler için stil */
+.treeview ul ul::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    border-left: 1px dashed #ccc;
+    top: 0;
+    bottom: 0;
+}
+
+.treeview a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+    .treeview a:hover {
+        text-decoration: underline;
+    }
+
+.treeview .jstree-anchor {
+    padding-left: 5px;
+}
+
+.treeview .jstree-themeicon {
+    display: none; /* Ýkonlarý kaldýr */
+}
+}

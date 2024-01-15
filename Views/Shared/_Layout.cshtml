@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr" data-nav-layout="vertical" class="light" data-header-styles="light" data-menu-styles="dark">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Tailwind dashboard templates for .NET Core (ASP.NET Core) admin panels are readily available online, offering a range of customizable and responsive options. Choose from free and paid templates to streamline your web development workflow today.">
+        <meta name="keywords" content="admin panel, admin dashboard, dashboard tailwind, asp net mvc, tailwind admin panel, admin panel dashboard, tailwind dashboard, net core mvc, asp net core, dotnet core, asp net core mvc, tailwind admin dashboard, admin dashboard template, admin panel template, admin template tailwind, tailwind admin template, admin tailwind">
+        
+        <title>Synto – Asp.Net Mvc5 Tailwind Admin Template</title>
+
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="~/assets/img/brand-logos/favicon.ico">
+
+        <!-- Main JS -->
+        <script src="~/assets/js/main.js"></script>
+
+        <link rel="stylesheet" href="~/css/styles.css" asp-append-version="true" />
+
+        <!-- Style Css -->
+        <link rel="stylesheet" href="~/assets/css/style.css" asp-append-version="true">
+
+        <!-- Simplebar Css -->
+        <link rel="stylesheet" href="~/assets/libs/simplebar/simplebar.min.css" asp-append-version="true">
+
+        <!-- Color Picker Css -->
+        <link rel="stylesheet" href="~/assets/libs/simonwep/pickr/themes/nano.min.css" asp-append-version="true">
+
+        <!-- @* @RenderSection("Css",false/*required*/) *@ -->
+        @await RenderSectionAsync("Css", required: false)
+
+    </head>
+    <body class="">
+
+        <!-- Start::main-switcher -->
+        <partial name="~/Views/Shared/layouts/_switcher.cshtml" />
+        <!-- End::main-switcher -->
+
+        <div class="page">
+
+            <!-- Start::app-sidebar -->
+            <partial name="~/Views/Shared/layouts/_app-sidebar.cshtml" />
+            <!-- End::app-sidebar -->
+
+            <!-- Start::app-header -->
+            <partial name="~/Views/Shared/layouts/_app-header.cshtml" />
+            <!-- End::app-header -->
+
+            @RenderBody()
+
+            <!-- Start::main-footer -->
+            <partial name="~/Views/Shared/layouts/_footer.cshtml" />
+            <!-- End::main-footer --> 
+            
+            <!-- Start::main-modal -->
+            <partial name="~/Views/Shared/layouts/_modal.cshtml" />
+            <!-- End::main-modal -->           
+
+        </div>
+        <!-- page closed -->
+
+        <!-- Back To Top -->
+        <div class="scrollToTop">
+            <span class="arrow"><i class="ri-arrow-up-s-fill text-xl"></i></span>
+        </div>
+
+        <div id="responsive-overlay"></div>
+
+        <!-- popperjs -->
+        <script src="~/assets/libs/popperjs/core/umd/popper.min.js"></script>
+
+        <!-- Color Picker JS -->
+        <script src="~/assets/libs/simonwep/pickr/pickr.es5.min.js"></script>
+
+        <!-- sidebar JS -->
+        <script src="~/assets/js/defaultmenu.js"></script>
+
+        <!-- sticky JS -->
+        <script src="~/assets/js/sticky.js"></script>
+
+        <!-- Switch JS -->
+        <script src="~/assets/js/switch.js"></script>
+
+        <!-- Preline JS -->
+        <script src="~/assets/libs/preline/preline.js"></script>
+        
+        <!-- Simplebar JS -->
+        <script src="~/assets/libs/simplebar/simplebar.min.js"></script>
+        
+        @await RenderSectionAsync("Scripts", required: false)
+
+        <!-- Custom JS -->
+        <script src="~/assets/js/custom.js"></script>
+               
+        <!-- Custom-Switcher JS -->
+        <script src="~/assets/js/custom-switcher.js"></script>
+
+    </body>
+</html>
