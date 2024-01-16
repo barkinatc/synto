@@ -13,3 +13,4 @@ C:\Users\user\Desktop\themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboa
 C:\Users\user\Desktop\themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template\Synto-MVC\Project.MAP\obj\Debug\net7.0\refint\Project.MAP.dll
 C:\Users\user\Desktop\themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template\Synto-MVC\Project.MAP\obj\Debug\net7.0\Project.MAP.pdb
 C:\Users\user\Desktop\themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template\Synto-MVC\Project.MAP\obj\Debug\net7.0\ref\Project.MAP.dll
+C:\Users\user\Desktop\themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template\Synto-MVC\Project.MAP\obj\Debug\net7.0\Project.MAP.sourcelink.json

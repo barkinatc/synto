@@ -19,3 +19,4 @@ C:\Users\user\Desktop\themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboa
 C:\Users\user\Desktop\themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template\Synto-MVC\Project.BLL\obj\Debug\net7.0\Project.BLL.pdb
 C:\Users\user\Desktop\themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template\Synto-MVC\Project.BLL\obj\Debug\net7.0\Project.BLL.genruntimeconfig.cache
 C:\Users\user\Desktop\themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template\Synto-MVC\Project.BLL\obj\Debug\net7.0\ref\Project.BLL.dll
+C:\Users\user\Desktop\themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template\Synto-MVC\Project.BLL\obj\Debug\net7.0\Project.BLL.sourcelink.json

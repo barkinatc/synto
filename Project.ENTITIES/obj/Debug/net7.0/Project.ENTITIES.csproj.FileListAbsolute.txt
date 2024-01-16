@@ -10,3 +10,4 @@ C:\Users\user\Desktop\themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboa
 C:\Users\user\Desktop\themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template\Synto-MVC\Project.ENTITIES\obj\Debug\net7.0\refint\Project.ENTITIES.dll
 C:\Users\user\Desktop\themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template\Synto-MVC\Project.ENTITIES\obj\Debug\net7.0\Project.ENTITIES.pdb
 C:\Users\user\Desktop\themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template\Synto-MVC\Project.ENTITIES\obj\Debug\net7.0\ref\Project.ENTITIES.dll
+C:\Users\user\Desktop\themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template\Synto-MVC\Project.ENTITIES\obj\Debug\net7.0\Project.ENTITIES.sourcelink.json

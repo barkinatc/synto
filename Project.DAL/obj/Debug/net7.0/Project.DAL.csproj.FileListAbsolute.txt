@@ -17,3 +17,4 @@ C:\Users\user\Desktop\themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboa
 C:\Users\user\Desktop\themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template\Synto-MVC\Project.DAL\obj\Debug\net7.0\Project.DAL.pdb
 C:\Users\user\Desktop\themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template\Synto-MVC\Project.DAL\obj\Debug\net7.0\Project.DAL.genruntimeconfig.cache
 C:\Users\user\Desktop\themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template\Synto-MVC\Project.DAL\obj\Debug\net7.0\ref\Project.DAL.dll
+C:\Users\user\Desktop\themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template\Synto-MVC\Project.DAL\obj\Debug\net7.0\Project.DAL.sourcelink.json

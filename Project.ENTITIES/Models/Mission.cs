@@ -10,7 +10,7 @@ namespace Project.ENTITIES.Models
     public class Mission:BaseEntity,IEntity
     {
 
-
+        //public int? AppUserID { get; set; }
         public string MissionName { get; set; }
 
         public int? InstitutionID { get; set; }
