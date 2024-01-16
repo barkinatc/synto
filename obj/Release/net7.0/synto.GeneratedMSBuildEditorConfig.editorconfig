@@ -1,0 +1,691 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = synto
+build_property.RootNamespace = synto
+build_property.ProjectDir = C:\Users\user\Desktop\themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template\Synto-MVC\synto\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\user\Desktop\themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template\Synto-MVC\synto
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Areas/Admin/Views/Category/ListCategories.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcTGlzdENhdGVnb3JpZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Areas/Admin/Views/Category/TreeView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcQ2F0ZWdvcnlcVHJlZVZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Areas/Admin/Views/Institution/ListInstitutions.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSW5zdGl0dXRpb25cTGlzdEluc3RpdHV0aW9ucy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Areas/Admin/Views/Institution/UpdateInstitution.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcSW5zdGl0dXRpb25cVXBkYXRlSW5zdGl0dXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Areas/Admin/Views/Mission/AssignMission.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTWlzc2lvblxBc3NpZ25NaXNzaW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Areas/Admin/Views/Mission/AssignTask.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTWlzc2lvblxBc3NpZ25UYXNrLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Areas/Admin/Views/Mission/ChooseCategory.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTWlzc2lvblxDaG9vc2VDYXRlZ29yeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Areas/Admin/Views/Mission/ChooseProject.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTWlzc2lvblxDaG9vc2VQcm9qZWN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Areas/Admin/Views/Mission/CreatePage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcTWlzc2lvblxDcmVhdGVQYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Areas/Admin/Views/Page/ChoosePageIndex.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUGFnZVxDaG9vc2VQYWdlSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Areas/Admin/Views/ProjectA/ListProjects.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvamVjdEFcTGlzdFByb2plY3RzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Areas/Admin/Views/ProjectA/ProjectTreeView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcUHJvamVjdEFcUHJvamVjdFRyZWVWaWV3LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Areas/Admin/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = QXJlYXNcQWRtaW5cVmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Advancedui/calendar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWR2YW5jZWR1aVxjYWxlbmRhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Advancedui/carousel.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWR2YW5jZWR1aVxjYXJvdXNlbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Advancedui/draggable.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWR2YW5jZWR1aVxkcmFnZ2FibGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Advancedui/filedetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWR2YW5jZWR1aVxmaWxlZGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Advancedui/filemanager.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWR2YW5jZWR1aVxmaWxlbWFuYWdlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Advancedui/filemanagerlist.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWR2YW5jZWR1aVxmaWxlbWFuYWdlcmxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Advancedui/gallery.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWR2YW5jZWR1aVxnYWxsZXJ5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Advancedui/notifications.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWR2YW5jZWR1aVxub3RpZmljYXRpb25zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Advancedui/rangeslider.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWR2YW5jZWR1aVxyYW5nZXNsaWRlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Advancedui/ratings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWR2YW5jZWR1aVxyYXRpbmdzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Advancedui/sweetalert.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWR2YW5jZWR1aVxzd2VldGFsZXJ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Advancedui/treeview.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWR2YW5jZWR1aVx0cmVldmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Authentication/comingsoon.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cY29taW5nc29vbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Authentication/construction.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cY29uc3RydWN0aW9uLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Authentication/createpassword.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cY3JlYXRlcGFzc3dvcmQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Authentication/createpasswordcover.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cY3JlYXRlcGFzc3dvcmRjb3Zlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Authentication/createpasswordcover2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cY3JlYXRlcGFzc3dvcmRjb3ZlcjIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Authentication/error404.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cZXJyb3I0MDQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Authentication/error500.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cZXJyb3I1MDAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Authentication/forgot.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cZm9yZ290LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Authentication/forgotcover.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cZm9yZ290Y292ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Authentication/forgotcover2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cZm9yZ290Y292ZXIyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Authentication/lockscreen.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cbG9ja3NjcmVlbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Authentication/lockscreencover.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cbG9ja3NjcmVlbmNvdmVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Authentication/lockscreencover2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cbG9ja3NjcmVlbmNvdmVyMi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Authentication/maintanace.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cbWFpbnRhbmFjZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Authentication/reset.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25ccmVzZXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Authentication/resetcover.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25ccmVzZXRjb3Zlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Authentication/resetcover2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25ccmVzZXRjb3ZlcjIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Authentication/signin.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cc2lnbmluLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Authentication/signincover.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cc2lnbmluY292ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Authentication/signincover2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cc2lnbmluY292ZXIyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Authentication/signup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cc2lnbnVwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Authentication/signupcover.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cc2lnbnVwY292ZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Authentication/signupcover2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cc2lnbnVwY292ZXIyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Authentication/verfication.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cdmVyZmljYXRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Authentication/verficationcover.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cdmVyZmljYXRpb25jb3Zlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Authentication/verficationcover2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aGVudGljYXRpb25cdmVyZmljYXRpb25jb3ZlcjIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Basicui/datatables.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFzaWN1aVxkYXRhdGFibGVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Basicui/dropdown.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFzaWN1aVxkcm9wZG93bi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Basicui/edittable.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFzaWN1aVxlZGl0dGFibGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Basicui/modal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFzaWN1aVxtb2RhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Basicui/offcanvas.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFzaWN1aVxvZmZjYW52YXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Basicui/tables.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFzaWN1aVx0YWJsZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Basicui/tooltippopovers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmFzaWN1aVx0b29sdGlwcG9wb3ZlcnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Charts/apexcharts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhcnRzXGFwZXhjaGFydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Charts/chartjs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhcnRzXGNoYXJ0anMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Charts/echartjs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhcnRzXGVjaGFydGpzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Components/accordion.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcG9uZW50c1xhY2NvcmRpb24uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Components/alerts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcG9uZW50c1xhbGVydHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Components/avatars.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcG9uZW50c1xhdmF0YXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Components/badges.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcG9uZW50c1xiYWRnZXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Components/blockquotes.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcG9uZW50c1xibG9ja3F1b3Rlcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Components/buttons.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcG9uZW50c1xidXR0b25zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Components/cards.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcG9uZW50c1xjYXJkcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Components/collapse.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcG9uZW50c1xjb2xsYXBzZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Components/indicators.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcG9uZW50c1xpbmRpY2F0b3JzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Components/list.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcG9uZW50c1xsaXN0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Components/listgroup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcG9uZW50c1xsaXN0Z3JvdXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Components/progress.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcG9uZW50c1xwcm9ncmVzcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Components/skeleton.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcG9uZW50c1xza2VsZXRvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Components/spinners.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcG9uZW50c1xzcGlubmVycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Components/toast.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcG9uZW50c1x0b2FzdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Elements/breadcrumb.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWxlbWVudHNcYnJlYWRjcnVtYi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Elements/columns.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWxlbWVudHNcY29sdW1ucy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Elements/grid.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWxlbWVudHNcZ3JpZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Elements/megamenu.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWxlbWVudHNcbWVnYW1lbnUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Elements/navbar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWxlbWVudHNcbmF2YmFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Elements/pagination.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWxlbWVudHNccGFnaW5hdGlvbi5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Elements/scrollspy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWxlbWVudHNcc2Nyb2xsc3B5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Elements/tabs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRWxlbWVudHNcdGFicy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Forms/advancedforms.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybXNcYWR2YW5jZWRmb3Jtcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Forms/fileupload.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybXNcZmlsZXVwbG9hZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Forms/formcheckbox.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybXNcZm9ybWNoZWNrYm94LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Forms/formelements.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybXNcZm9ybWVsZW1lbnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Forms/forminputgroup.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybXNcZm9ybWlucHV0Z3JvdXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Forms/formlayouts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybXNcZm9ybWxheW91dHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Forms/formradio.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybXNcZm9ybXJhZGlvLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Forms/formselect.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybXNcZm9ybXNlbGVjdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Forms/formswitch.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybXNcZm9ybXN3aXRjaC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Forms/formvalidations.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybXNcZm9ybXZhbGlkYXRpb25zLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Forms/quileditor.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRm9ybXNccXVpbGVkaXRvci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Home/index10.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxpbmRleDEwLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Home/index11.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxpbmRleDExLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Home/index12.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxpbmRleDEyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Home/index2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxpbmRleDIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Home/index3.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxpbmRleDMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Home/index4.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxpbmRleDQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Home/index5.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxpbmRleDUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Home/index6.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxpbmRleDYuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Home/index7.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxpbmRleDcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Home/index8.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxpbmRleDguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Home/index9.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxpbmRleDkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Icons/remixicons.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSWNvbnNccmVtaXhpY29ucy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Icons/tablericons.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSWNvbnNcdGFibGVyaWNvbnMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Maps/googlemaps.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFwc1xnb29nbGVtYXBzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Maps/leafletmaps.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFwc1xsZWFmbGV0bWFwcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Maps/vectormaps.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFwc1x2ZWN0b3JtYXBzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Pages/about.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcYWJvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Pages/addproduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcYWRkcHJvZHVjdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Pages/blog.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcYmxvZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Pages/blogdetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcYmxvZ2RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Pages/blogedit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcYmxvZ2VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Pages/cart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcY2FydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Pages/chat.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcY2hhdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Pages/checkout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcY2hlY2tvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Pages/contacts.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcY29udGFjdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Pages/contactus.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcY29udGFjdHVzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Pages/editproduct.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcZWRpdHByb2R1Y3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Pages/emptypage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcZW1wdHlwYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Pages/faqs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcZmFxcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Pages/invoice.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcaW52b2ljZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Pages/invoicelist.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcaW52b2ljZWxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Pages/landing.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcbGFuZGluZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Pages/mailinbox.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcbWFpbGluYm94LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Pages/mailsettings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcbWFpbHNldHRpbmdzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Pages/orderdetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcb3JkZXJkZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Pages/orders.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcb3JkZXJzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Pages/pricing.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNccHJpY2luZy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Pages/productlist.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNccHJvZHVjdGxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Pages/products.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNccHJvZHVjdHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Pages/productsdetails.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNccHJvZHVjdHNkZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Pages/profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNccHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Pages/profilesettings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNccHJvZmlsZXNldHRpbmdzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Pages/reviews.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNccmV2aWV3cy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Pages/tasks.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcdGFza3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Pages/team.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcdGVhbS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Pages/terms.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcdGVybXMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Pages/timeline.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcdGltZWxpbmUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Pages/todo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcdG9kby5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Pages/wishlist.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcd2lzaGxpc3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Shared/layouts/landingpage/_app-header.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGxheW91dHNcbGFuZGluZ3BhZ2VcX2FwcC1oZWFkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Shared/layouts/landingpage/_app-header1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGxheW91dHNcbGFuZGluZ3BhZ2VcX2FwcC1oZWFkZXIxLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Shared/layouts/landingpage/_app-sidebar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGxheW91dHNcbGFuZGluZ3BhZ2VcX2FwcC1zaWRlYmFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Shared/layouts/landingpage/_app-sidebar1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGxheW91dHNcbGFuZGluZ3BhZ2VcX2FwcC1zaWRlYmFyMS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Shared/layouts/landingpage/_modal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGxheW91dHNcbGFuZGluZ3BhZ2VcX21vZGFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Shared/layouts/landingpage/_switcher.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGxheW91dHNcbGFuZGluZ3BhZ2VcX3N3aXRjaGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Shared/layouts/_app-header.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGxheW91dHNcX2FwcC1oZWFkZXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Shared/layouts/_app-header1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGxheW91dHNcX2FwcC1oZWFkZXIxLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Shared/layouts/_app-sidebar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGxheW91dHNcX2FwcC1zaWRlYmFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Shared/layouts/_footer.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGxheW91dHNcX2Zvb3Rlci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Shared/layouts/_modal.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGxheW91dHNcX21vZGFsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Shared/layouts/_switcher.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXGxheW91dHNcX3N3aXRjaGVyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Shared/_Layout1.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQxLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Shared/_Layout2.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Shared/_Layout3.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Shared/_Layout4.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQ0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Widgets/widgets.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcV2lkZ2V0c1x3aWRnZXRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/user/Desktop/themeforest-takl5cbu-synto-aspnet-core7-mvc5-admin-dashboard-template/Synto-MVC/synto/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-1zslzlkf2z

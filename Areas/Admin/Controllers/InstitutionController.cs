@@ -9,21 +9,60 @@ namespace synto.Areas.Admin.Controllers
     public class InstitutionController : Controller
     {
         private readonly IInstitutionManager _institutionManager;
-        public InstitutionController(IInstitutionManager institutionManager)
+        private readonly IAppUserManager _userMan;
+        public InstitutionController(IInstitutionManager institutionManager, IAppUserManager userMan)
         {
             _institutionManager = institutionManager;
+            _userMan = userMan;
         }
 
-        
+
         public IActionResult ListInstitutions()
         {
-
-
+            List<AppUserVM> users = _userMan.GetActives().Select(x => new AppUserVM
+            {
+                ID = x.Id,
+                Name = x.Name,
+                Mail = x.Email,
+                Surname = x.Surname,
+                InstitutionID = x.InstitutionID
+            }).ToList();
             List<AdminInstitutionVM> list = _institutionManager.GetActives().Select(x => new AdminInstitutionVM
             {
                 ID = x.ID,
                 Name = x.Name
             }).ToList();
+            List<InstitutionTreeViewVM> nodes = new List<InstitutionTreeViewVM>();
+
+            foreach (var institution in list)
+            {
+                var institutionNode = new InstitutionTreeViewVM
+                {
+                    ID = institution.ID,
+                    Name = institution.Name,
+                    Children = new List<InstitutionTreeViewVM>()
+                };
+
+                // Bu kurumun kullanıcılarını bul
+                var usersInInstitution = groupedUsers.FirstOrDefault(g => g.Key == institution.ID);
+
+                if (usersInInstitution != null)
+                {
+                    foreach (var user in usersInInstitution)
+                    {
+                        institutionNode.Children.Add(new InstitutionTreeViewVM
+                        {
+                            ID = user.ID,
+                            Name = $"{user.Name} {user.Surname}" // İsim ve soyismi birleştirme
+                        });
+                    }
+                }
+
+                nodes.Add(institutionNode);
+            }
+
+
+
             AdminListAddInstitutionVM pageVM = new AdminListAddInstitutionVM
             {
                 AdminInstitutionVMs = list

@@ -4,83 +4,113 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 @section Css {
+    <style>
+        .content {
+            display: flex;
+            justify-content: center;
+            gap: 2rem; /* Bölümler arasında boşluk */
+            padding: 2rem; /* İçerik için padding */
+        }
 
+        .form-container, .list-container {
+            flex-basis: calc(50% - 1rem); /* Her iki bölüm için genişlik */
+            max-width: calc(50% - 1rem); /* Maksimum genişlik */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Gölge efekti */
+            border-radius: 10px; /* Kenar yuvarlaklığı */
+            overflow: hidden; /* Taşan içerikleri gizle */
+        }
+
+        /* Tablo düzenlemeleri */
+        .ti-custom-table {
+            width: 100%;
+            table-layout: fixed; /* Sabit tablo düzeni */
+        }
+
+            .ti-custom-table th, .ti-custom-table td {
+                text-align: center; /* Başlık ve hücre içeriklerini ortala */
+            }
+
+        /* Buton stil düzenlemeleri */
+        .badge {
+            display: inline-block;
+            padding: 0.5em 1em;
+            text-align: center;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+
+            .badge.bg-danger {
+                background-color: #dc3545;
+                color: white;
+            }
+
+            .badge.bg-warning {
+                background-color: #ffc107;
+                color: black;
+            }
+    </style>
 
 
 }
 <div class="content">
-
-    <!-- Start::main-content -->
-    <div class="main-content">
-
-        <!-- Page Header -->
-        <div class="block justify-between page-header sm:flex">
-            <div>
-                <h1 class="text-gray-700 hover:text-gray-900 dark:text-white dark:hover:text-white text-2xl font-medium"> Kurumlar</h1>
-            </div>
-           
-        </div>
-        <!-- Page Header Close -->
-        <!-- Start::row-1 -->
-      
-        <!-- End::row-1 -->
-
-    </div>
-    <!-- Start::main-content -->
-    <form action="/Admin/Institution/AddInstitutions" method="post">
-    <div class="col-span-12 lg:col-span-4">
-        <div class="box">
-            <div class="box-header">
-                <h5 class="box-title">Kurum Ekleme</h5>
-            </div>
-            <div class="box-body">
-                <label for="input-label"
-                       class="ti-form-label">Kurum</label>
-                <input type="text"  class="ti-form-input" placeholder="Kurum adı giriniz" required asp-for="@Model.AdminInstitutionVM.Name">
-            </div>
-            <div>
-                <button type="submit" class="ti-btn ti-btn-primary">Ekle</button>
-
-            </div>
-        </div>
-    </div>
-    </form>
-    <div class="grid grid-cols-12 gap-6">
-        <div class="col-span-12">
+   
+    <!-- Kurum Ekleme Formu -->
+    <div class="form-container">
+        <form action="/Admin/Institution/AddInstitutions" method="post">
             <div class="box">
                 <div class="box-header">
-                    <h5 class="box-title">Kurumların Listesi</h5>
+                    <h5 class="box-title">Kurum Ekleme</h5>
                 </div>
                 <div class="box-body">
-                    <div class="overflow-auto table-bordered">
-                        <table class ="ti-custom-table ti-striped-table ti-custom-table-hover">
+                    <label for="input-label" class="ti-form-label">Kurum</label>
+                    <input type="text" class="ti-form-input" placeholder="Kurum adı giriniz" required asp-for="@Model.AdminInstitutionVM.Name">
+                </div>
+                <div>
+                    <button type="submit" class="ti-btn ti-btn-primary">Ekle</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Kurumların Listesi -->
+    <div class="list-container">
+        <div class="box">
+            <div class="box-header">
+                <h5 class="box-title">Kurumların Listesi</h5>
+            </div>
+            <div class="box-body">
+                <div class="overflow-auto table-bordered">
+                    <table class="ti-custom-table ti-striped-table ti-custom-table-hover">
+                        <thead>
                             <tr>
                                 <th>Adı</th>
                                 <th>Güncelle</th>
                                 <th>Sil</th>
                             </tr>
+                        </thead>
+                        <tbody>
                             @foreach (var item in Model.AdminInstitutionVMs)
                             {
                                 <tr>
                                     <td>@item.Name</td>
-                                    <td><a href="/Admin/Institution/DeleteInstitution/@item.ID" class="badge bg-danger text-white">Sil</a></td>
-
-
-
-                                    <td><a href="/Admin/Institution/UpdateInstitution/@item.ID" class="badge bg-warning text-white">Güncelle</a></td>
+                                    <td>
+                                        <a href="/Admin/Institution/UpdateInstitution/@item.ID" class="badge bg-warning text-white">Güncelle</a>
+                                    </td>
+                                    <td>
+                                        <a href="/Admin/Institution/DeleteInstitution/@item.ID" class="badge bg-danger text-white">Sil</a>
+                                    </td>
                                 </tr>
                             }
-                        </table>
-                    </div>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
     </div>
-    
+
 </div>
-
-@section scripts {
-
-
-
+@section Scripts {
+    <!-- JavaScript ve diğer scriptlerinizi buraya ekleyebilirsiniz -->
 }
+
+

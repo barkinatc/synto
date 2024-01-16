@@ -11,6 +11,7 @@
 
         public string? TextArea { get; set; }
         public string? DataInput { get; set; }
+        public string? itemId { get; set; }
 
 
     }

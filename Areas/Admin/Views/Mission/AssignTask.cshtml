@@ -7,124 +7,108 @@
 @section Css {
 
     <style>
-        .outer-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 6px;
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            display: flex;
         }
 
-        .dragula-container {
-            border: 2px dashed #ccc;
-            padding: 10px;
-            min-height: 100px;
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%; /* Row genişliğini tam ekran yapın */
         }
 
-        .index {
-            border: 2px dashed #ccc;
-            padding: 10px;
-            min-height: 100px;
+        .col-6 {
+            flex: 0 0 50%;
+            max-width: 50%;
         }
 
-        .draggable-item {
-            padding: 5px;
-            border: 1px solid #ddd;
-            margin-bottom: 5px;
-            background-color: #f8f9fa;
-            cursor: move;
-        }
-
+        /* İsteğe bağlı diğer stil ayarlamaları */
         .box {
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
+
+        .box-header {
+            margin-bottom: 20px;
+        }
+
+        .ti-custom-table {
+            width: 100%;
+        }
+
     </style>
 
 }
 <div class="content">
-
     <!-- Start::main-content -->
     <div class="main-content">
-
         <!-- Page Header -->
         <div class="block justify-between page-header sm:flex">
             <div>
-                <h3 class="text-gray-700 hover:text-gray-900 dark:text-white dark:hover:text-white text-2xl font-medium"> Empty Page</h3>
-            </div>
-            <ol class="flex items-center whitespace-nowrap min-w-0">
-                <li class="text-sm">
-                    <a class="flex items-center font-semibold text-primary hover:text-primary dark:text-primary truncate" href="javascript:void(0);">
-                        Pages
-                        <i class="ti ti-chevrons-right flex-shrink-0 mx-3 overflow-visible text-gray-300 dark:text-gray-300 rtl:rotate-180"></i>
-                    </a>
-                </li>
-                <li class="text-sm text-gray-500 hover:text-primary dark:text-white/70 " aria-current="page">
+                @if (ViewBag.InstitutionName !=null)
+                {
+                    <h3 class="text-2xl font-medium">@ViewBag.InstitutionName Görevleri </h3>
+                }
+                else
+                {
+                    <h3 class="text-2xl font-medium">Görevler Sayfası</h3>
 
-                </li>
-            </ol>
+                }
+
+               
+                
+            </div>
+            <!-- Your breadcrumb or other elements -->
         </div>
         <!-- Page Header Close -->
-        <!-- Start::row-1 -->
-        <div class="grid grid-cols-12 gap-6">
-            <div class="col-span-12">
-                <div class="box">
-                    <div class="box-body">
-
-                        @if (Model != null)
-                        {
-                            <div class="box-header">
-                                <h5 class="box-title">Default Table</h5>
-                            </div>
-                            <div class="box-body p-0">
-                                <div class="overflow-auto">
-                                    <table class="ti-custom-table ti-custom-table-head">
-                                        <thead>
-                                            <tr>
-                                                <th scope="col">Hangi sayfa için</th>
-                                                <th scope="col">Sayfanın içeriği</th>
-                                                @* <th scope="col">Address</th> *@
-                                                <th scope="col" class="!text-end">Action</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            @foreach (var item in Model.Missions)
-                                            {
-                                                <tr>
-                                                    <td class="font-medium">@item.CategoryName</td>
-                                                    @if (item.PageType == 0)
-                                                    {
-                                                        <td>resim</td>
-
-                                                    }
-                                                    else if (item.PageType==1)
-                                                    {
-                                                        <td>Yazı</td>
-                                                    }
-                                                    else
-                                                    {
-                                                        <td>data</td>
-                                                    }
-                                                     
-                                            <td class="!text-end font-medium">
+        <div class="box">
+            <div class="box-header">
+                <h5 class="box-title"></h5>
+            </div>
+            <div class="box-body">
+                @if (Model != null && Model.Missions.Any())
+                {
+                    <div class="overflow-auto">
+                        <table class="ti-custom-table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Hangi sayfa için</th>
+                                    <th scope="col">Sayfanın içeriği</th>
+                                    <th scope="col">Durum</th>
+                                    <th scope="col">Oluşturulma Tarihi</th>
+                                    <th scope="col" class="!text-end">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.Missions)
+                                {
+                                    <tr>
+                                        <td class="font-medium">@item.CategoryName</td>
+                                        <td>@item.MissionName</td>
+                                        <td>@(item.Status != Project.ENTITIES.Enums.DataStatus.Deleted ? "Aktif" : "Pasif")</td>
+                                        <td>@item.CreatedDate</td>
+                                        <td class="!text-end">
                                             <a class="text-primary hover:text-primary" href="/Admin/Mission/CreatePage/@item.CategoryID">Görevi yap</a>
-                                            </td>
-                                                </tr>
-
-                                            }
-                                            
-                                           
-                                        </tbody>
-                                    </table>
-                                </div>
-                            </div>
-                            
-                            
-                        }
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
                     </div>
-                </div>
+                }
+                else
+                {
+                    <h2 class="text-center">@ViewBag.EmptyUser <a href="/Authentication/signin">Giriş yapmak için tıklayınız.</a></h2>
+                }
             </div>
         </div>
-        <!-- End::row-1 -->
-
     </div>
-    <!-- Start::main-content -->
+    <!-- End::main-content -->
 
 </div>
 

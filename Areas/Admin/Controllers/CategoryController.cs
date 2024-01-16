@@ -44,50 +44,50 @@ namespace synto.Areas.Admin.Controllers
             return View(page);
         }
       
-        public IActionResult TreeView()
-        {
-            List<AdminCategoryVM> listCategories = _catMan.GetActives().Select(x => new AdminCategoryVM
-            {
-                ID = x.ID,
-                Name = x.Name
+        //public IActionResult TreeView()
+        //{
+        //    List<AdminCategoryVM> listCategories = _catMan.GetActives().Select(x => new AdminCategoryVM
+        //    {
+        //        ID = x.ID,
+        //        Name = x.Name
 
                 
-            }).ToList();
-            List<AdminSubCategoryVM> subList = _subCategoryMan.GetActives().Select(x => new AdminSubCategoryVM
-            {
-                ID= x.ID,
-                SubCategoryName = x.SubCategoryName,
-                CategoryID = x.CategoryID
-            }).ToList();
-            List<AdminTreeViewVM> nodes = new List<AdminTreeViewVM>();
-            foreach (var item in listCategories)
-            {
+        //    }).ToList();
+        //    List<AdminSubCategoryVM> subList = _subCategoryMan.GetActives().Select(x => new AdminSubCategoryVM
+        //    {
+        //        ID= x.ID,
+        //        SubCategoryName = x.SubCategoryName,
+        //        CategoryID = x.CategoryID
+        //    }).ToList();
+        //    List<AdminTreeViewVM> nodes = new List<AdminTreeViewVM>();
+        //    foreach (var item in listCategories)
+        //    {
 
-                nodes.Add(new AdminTreeViewVM
-                {
-                    ID = item.ID.ToString(),
-                    Parent = "#",
-                    Text = item.Name
-                });
-            }
-            foreach (var item in subList)
-            {
-                nodes.Add(new AdminTreeViewVM
-                {
-                    ID =  item.ID.ToString(),
-                    Parent = item.CategoryID.ToString(),
-                    Text = item.SubCategoryName
-                });
-            }
+        //        nodes.Add(new AdminTreeViewVM
+        //        {
+        //            ID = item.ID.ToString(),
+        //            Parent = "#",
+        //            Text = item.Name
+        //        });
+        //    }
+        //    foreach (var item in subList)
+        //    {
+        //        nodes.Add(new AdminTreeViewVM
+        //        {
+        //            ID =  item.ID.ToString(),
+        //            Parent = item.CategoryID.ToString(),
+        //            Text = item.SubCategoryName
+        //        });
+        //    }
 
-            AdminCategoryPageVM page = new AdminCategoryPageVM
-            {
-                AdminCategoryVMs = listCategories,
-                AdminTreeViewVMs = nodes
-            };
+        //    AdminCategoryPageVM page = new AdminCategoryPageVM
+        //    {
+        //        AdminCategoryVMs = listCategories,
+        //        AdminTreeViewVMs = nodes
+        //    };
 
-            return View(page);
-        }
+        //    return View(page);
+        //}
 
         [HttpGet]
         public ActionResult AddCategory()
@@ -137,7 +137,7 @@ namespace synto.Areas.Admin.Controllers
         }
 
         [HttpGet]
-        public IActionResult UpdateInstitution(int id)
+        public IActionResult UpdateCategory(int id)
         {
             AdminCategoryVM? adminCategory = _catMan.Where(x => x.ID == id).Select(x => new AdminCategoryVM
             {
@@ -147,7 +147,7 @@ namespace synto.Areas.Admin.Controllers
             return View(adminCategory);
         }
         [HttpPost]
-        public IActionResult UpdateInstitution(AdminCategoryVM p)
+        public IActionResult UpdateCategory(AdminCategoryVM p)
         {
             Category toBeUpdated = _catMan.Find(p.ID);
             toBeUpdated.Name = p.Name;

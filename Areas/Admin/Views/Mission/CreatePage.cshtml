@@ -85,6 +85,9 @@
                     <div class="box-body">
 
                         <form  method="post" action="/Admin/Mission/CreatePage" enctype="multipart/form-data">
+                            
+                            <div id="dynamic-id"></div>
+
                             <div id="dynamic-content"></div>
                             <button type="submit" class="ti-btn ti-btn-primary">Gönder</button>
                         </form>
@@ -101,19 +104,33 @@
 </div>
 
 @section scripts {
+    <script src="https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
     <script>
-        function handleClick(pageType, itemId) {
-            var dynamicContent = document.getElementById('dynamic-content');
-            dynamicContent.innerHTML = ''; 
+        tinymce.init({
+            selector: 'textarea#myTextArea'
+        });
+    </script>
+    <script>
+       function handleClick(pageType, itemId) {
+    var dynamicID = document.getElementById('dynamic-id');
+    dynamicID.innerHTML = '<input type="hidden" name="itemId" value="' + itemId + '" >';
+    var dynamicContent = document.getElementById('dynamic-content');
+    dynamicContent.innerHTML = ''; 
+    
+    console.log('page id =' + itemId)
+    if (pageType == 0) {
+        dynamicContent.innerHTML = '<input type="file" name="Image" accept="image/*">';
+    } else if (pageType == 1) {
+        dynamicContent.innerHTML = '<textarea id="myTextArea" name="TextArea"></textarea>';
+        tinymce.init({
+            selector: '#myTextArea'
+        });
+    } else if (pageType == 2) { 
+        dynamicContent.innerHTML = '<input type="text" name="dataInput" placeholder="Veri girin">';
+    }
+}
 
-            if (pageType == 0) {
-                dynamicContent.innerHTML = '<input type="file" name="Image" accept="image/*">';
-            } else if (pageType == 1) {
-                dynamicContent.innerHTML = '<textarea name="TextArea"></textarea>';
-            } else if (pageType == 2) { 
-                dynamicContent.innerHTML = '<input type="text" name="dataInput" placeholder="Veri girin">';
-            }
-        }
+       
     </script>
 
 }

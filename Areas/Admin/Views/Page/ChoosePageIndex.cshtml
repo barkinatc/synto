@@ -18,7 +18,7 @@
         .dragula-container {
             border: 2px dashed #ccc;
             padding: 10px;
-            min-height: 200px;
+            min-height: 5px;
         }
 
         .draggable-item {
@@ -36,142 +36,91 @@
 
 }
 <div class="content">
-   
-    <!-- Start::main-content -->
     <div class="main-content">
-
-        <!-- Page Header -->
         <div class="block justify-between page-header sm:flex">
-            <div>
-                <h3 class="text-gray-700 hover:text-gray-900 dark:text-white dark:hover:text-white text-2xl font-medium">
-                    
-                </h3>
-            </div>
+            <!-- Page Header -->
+            <h3 class="text-gray-700 hover:text-gray-900 dark:text-white dark:hover:text-white text-2xl font-medium">
+                <!-- Eğer başlık içeriği varsa buraya ekleyin -->
+                Sayfa şablonu belirleyin
+            </h3>
+            <!-- Breadcrumb Navigation -->
             <ol class="flex items-center whitespace-nowrap min-w-0">
-                <li class="text-sm">
+                <li>
                     <a class="flex items-center font-semibold text-primary hover:text-primary dark:text-primary truncate" href="javascript:void(0);">
                         Pages
                         <i class="ti ti-chevrons-right flex-shrink-0 mx-3 overflow-visible text-gray-300 dark:text-gray-300 rtl:rotate-180"></i>
                     </a>
                 </li>
-                <li class="text-sm text-gray-500 hover:text-primary dark:text-white/70 " aria-current="page">
-
+                <li class="text-sm text-gray-500 hover:text-primary dark:text-white/70" aria-current="page">
+                    <!-- Eğer mevcutsa, geçerli sayfanın adını buraya ekleyin -->
                 </li>
             </ol>
         </div>
-       
-        <!-- Page Header Close -->
-
-        <!-- Start::row-1 -->
 
         <form id="create-page-form" action="/Admin/Page/ChoosePageIndex" method="post">
-            <div id="hidden-inputs-container">
-               
-            </div>
-            
+            <div id="hidden-inputs-container"></div>
             <div class="outer-grid grid grid-cols-2 gap-6">
-
+                <!-- Sol Kutu -->
                 <div class="box">
                     <div class="box-header">
-                        <h5 class="box-title">Default Offcanvas Left</h5>
+                        <h5 class="box-title">Eklemek istediğiniz içerikleri sürükleyin</h5>
                     </div>
                     <div class="box-body">
                         <div id="left" class="dragula-container">
-                            <div draggable="true" name="resimm"  id=0 class="draggable-item resim-item">Resim </div>
-                            <div draggable="true" name="yazıı" id=1 class="draggable-item yazi-item">Yazı </div>
-                            <div draggable="true" name="dataa" id=2 class="draggable-item data-item">Data </div>
+                            <div draggable="true" name="resimm" id="0" class="draggable-item resim-item">Görsel</div>
+                            <div draggable="true" name="yazıı" id="1" class="draggable-item yazi-item">Metin</div>
+                            <div draggable="true" name="dataa" id="2" class="draggable-item data-item">Veri</div>
                         </div>
-
-                        <button type="submit" class="ti-btn ti-btn-primary">Ekle</button>
-
+                        <br />
+                        <button type="submit" class="ti-btn ti-btn-primary">Şablonu Kaydet</button>
                     </div>
                 </div>
-
+                <!-- Sağ Kutu -->
                 <div class="box">
                     <div class="box-header">
-                        <h5 class="box-title">Default Offcanvas Right</h5>
+                        <h5 class="box-title">Mevcut Sayfa Şablonu</h5>
                     </div>
                     <div class="box-body">
                         <div id="right" class="dragula-container">
-                            @{
-                                var pages = ViewBag.Pages as List<AdminPageVM>;
-                            }
-                            @if (pages.Count>0)
+                            @if (ViewBag.Pages is List<AdminPageVM> pages && pages.Count > 0)
                             {
                                 @foreach (var item in pages.OrderBy(x => x.Order))
                                 {
 
                                     if (item.PageType == 0)
                                     {
-                                        <div class="dragula-container">
-                                            resim
+                                        <div id="@item.ID" class="dragula-container">
+                                            Görsel
                                         </div>
 
                                     }
                                     else if (item.PageType == 1)
                                     {
 
-                                        <div class="dragula-container ">
-                                            yazı
+                                        <div id="@item.ID" class="dragula-container ">
+                                            Metin
                                         </div>
                                     }
                                     else
                                     {
 
-                                        <div class="dragula-container ">
-                                            data
+                                        <div id="@item.ID" class="dragula-container ">
+                                            Veri
                                         </div>
                                     }
                                 }
                             }
                         </div>
-
-                        @*  @if (Model.PagesVM.Count >0)
-                        {
-
-                            
-
-                            @foreach (var item in Model.OrderBy(x => x.Order))
-                            {
-
-                                if (item.PageType == 0)
-                                {
-                                    <div  class="dragula-container">
-                                        resim
-                                    </div>
-
-                                }
-                                else if (item.PageType == 1)
-                                {
-
-                                    <div  class="dragula-container ">
-                                        yazı
-                                    </div>
-                                }
-                                else
-                                {
-
-                                    <div  class="dragula-container ">
-                                        data
-                                    </div>
-                                }
-                            }
-                            </div>
-
-                        } *@
-                       
                     </div>
                 </div>
             </div>
-
         </form>
-           
-        
     </div>
-
-
-
 </div>
+
+                
+
+
 
 @section scripts {
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dragula/3.7.3/dragula.min.js"></script>

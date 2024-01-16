@@ -4,6 +4,46 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+@section Css {
+
+   <style>
+        .container {
+            max-width: 100%;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%; /* Row genişliğini tam ekran yapın */
+        }
+
+        .col-6 {
+            flex: 0 0 50%;
+            max-width: 50%;
+        }
+
+        /* İsteğe bağlı diğer stil ayarlamaları */
+        .box {
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .box-header {
+            margin-bottom: 20px;
+        }
+
+        .ti-custom-table {
+            width: 100%;
+        }
+
+
+   </style>
+}
 <div class="content">
 
     <!-- Start::main-content -->
@@ -12,7 +52,7 @@
         <!-- Page Header -->
         <div class="block justify-between page-header sm:flex">
             <div>
-                <h3 class="text-gray-700 hover:text-gray-900 dark:text-white dark:hover:text-white text-2xl font-medium"> Projeler</h3>
+                <h3 class="text-gray-700 hover:text-gray-900 dark:text-white dark:hover:text-white text-2xl font-medium"> Stratejik Planlar</h3>
             </div>
             <ol class="flex items-center whitespace-nowrap min-w-0">
                 <li class="text-sm">
@@ -30,80 +70,87 @@
         <!-- Start::row-1 -->
         <!-- End::row-1 -->
         <!-- Start::main-content -->
-        <div class="form-container" style="max-width: 400px; margin-right: 0 auto;">
-            <form action="/Admin/ProjectA/AddProject" method="post">
-                <div class="col-span-12 lg:col-span-4">
+        <div class="container">
+            <div class="row">
+                <!-- Proje Ekleme Formu -->
+                <div class="col-6">
+                    <form action="/Admin/ProjectA/AddProject" method="post">
+                        <div class="box">
+                            <div class="box-header">
+                                <h5 class="box-title">Stratejik Plan Ekleme</h5>
+                            </div>
+                            <div class="box-body">
+                                <label for="input-label" class="ti-form-label">Stratejik Plan Dönem Adı</label>
+                                <input type="text" class="ti-form-input" placeholder="" required asp-for="@Model.ProjectVM.Name">
+                            </div>
+                            <div>
+                                <button type="submit" class="ti-btn ti-btn-primary">Ekle</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- Projelerin Listesi -->
+                <div class="col-6">
                     <div class="box">
                         <div class="box-header">
-                            <h5 class="box-title">Proje ekleme</h5>
+                            <h5 class="box-title">Stratejik Plan Ağaçları</h5>
                         </div>
-                        <div class="box-body">
-                            <label for="input-label" class="ti-form-label">Proje</label>
-                            <input type="text" class="ti-form-input" placeholder="Proje adı giriniz" required asp-for="@Model.ProjectVM.Name">
-
-                        </div>
-                        <div>
-                            <button type="submit" class="ti-btn ti-btn-primary">Ekle</button>
-                        </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-
-      
-
-        <!-- End::row-1 -->
-
-
-        <div class="grid grid-cols-12 gap-6">
-            <div class="col-span-12 lg:col-span-6">
-                <div class="box">
-                    <div class="box-header">
-                        <h5 class="box-title">Projelerin Listesi</h5>
-                    </div>
-                    <div class="box-body p-0">
-                        <div class="overflow-auto">
-                            <table class="ti-custom-table ti-custom-table-head ti-custom-table-hover">
-                                <thead>
-                                    <tr>
-                                        <th scope="col">Proje adı</th>
-
-                                        <th scope="col" class="!text-end">Action</th>
-                                        <th scope="col" class="!text-end">Action</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach (var item in Model.ProjectVMs)
-                                    {
+                        <div class="box-body p-0">
+                            <div class="overflow-auto">
+                                <table class="ti-custom-table ti-custom-table-head ti-custom-table-hover">
+                                    <thead>
                                         <tr>
-                                            <td class="font-medium">@item.Name</td>
-
-                                            <td class="text-end font-medium">
-                                                <a class="text-warning hover:text-primary" href="/Admin/ProjectA/ProjectTreeView/@item.ID">Proje Agacı Oluştur</a>
-                                            </td>
-                                            <td class="text-end font-medium">
-                                                <a class="text-danger hover:text-primary" href="/Admin/Project/DeleteProject/@item.ID">Sil</a>
-                                            </td>
+                                            <th scope="col">Stratejik Plan Adı</th>
+                                            <th scope="col">Stratejik Plan Dönemi</th>
+                                            <th scope="col" class="!text-end">Action</th>
+                                            <th scope="col" class="!text-end">Action</th>
                                         </tr>
-                                    }
-
-
-
-                                </tbody>
-                            </table>
+                                    </thead>
+                                    <tbody>
+                                        @foreach (var item in Model.ProjectVMs)
+                                        {
+                                            <tr>
+                                                <td class="font-medium">@item.Name</td>
+                                                <td class="font-medium">#</td>
+                                                <td class="text-end font-medium">
+                                                    <a class="text-info hover:text-primary" href="/Admin/ProjectA/ProjectTreeView/@item.ID">Proje Agacı Oluştur</a>
+                                                </td>
+                                                <td class="text-end font-medium">
+                                                    <a class="text-warning hover:text-primary" href="/Admin/ProjectA/UpdateProject/@item.ID">Güncelle</a>
+                                                </td>
+                                                <td class="text-end font-medium">
+                                                    <a class="text-danger hover:text-primary" href="/Admin/ProjectA/DeleteProject/@item.ID">Sil</a>
+                                                </td>
+                                                
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+               
 
+
+
+        <!-- End::row-1 -->
     </div>
 
 
 
 
 
-    <script src="~/assets/libs/dragula/dragula.min.js"></script>
-    <script src="~/assets/js/draggable.js"></script>
+</div>
+
+
+
+
+
+<script src="~/assets/libs/dragula/dragula.min.js"></script>
+<script src="~/assets/js/draggable.js"></script>
 
 

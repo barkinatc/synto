@@ -1,9 +1,14 @@
+using Microsoft.AspNetCore.Mvc;
 using Project.BLL.ServiceInjections;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddMvc(options =>
+{
+    options.CacheProfiles.Add("NoCache", new CacheProfile { NoStore = true });
+});
 builder.Services
 
     .AddDbContextService()

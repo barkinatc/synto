@@ -140,7 +140,7 @@ public class AuthenticationController : Controller
             var result = await _signInManager.PasswordSignInAsync(p.Mail, p.Password, false, false);
             if (result.Succeeded)
             {
-                return RedirectToAction("index","home");
+                return Redirect("/Admin/Mission/AssignTask");
 
             }
             else

@@ -7,7 +7,41 @@
 
 @section Css {
     <link id="style" href="~/assets/libs/treeview/treeview.min.css" rel="stylesheet" asp-append-version="true">
+    <style>
+        /* TreeView Genel Stili */
+        #projectTree {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
 
+            /* Node Stili */
+            #projectTree .jstree-node {
+                color: #333;
+                font-size: 14px;
+            }
+
+            /* Seçili Node Stili */
+            #projectTree .jstree-wholerow-clicked,
+            #projectTree .jstree-clicked {
+                background-color: #007bff !important;
+                color: white !important;
+            }
+
+            /* Hover Node Stili */
+            #projectTree .jstree-wholerow-hovered,
+            #projectTree .jstree-hovered {
+                background-color: #0056b3 !important;
+                color: white !important;
+            }
+
+            /* İkon Stili */
+            #projectTree .jstree-icon {
+                color: #007bff;
+            }
+    </style>
 
 
 }
@@ -19,7 +53,7 @@
         <!-- Page Header -->
         <div class="block justify-between page-header sm:flex">
             <div>
-                <h3 class="text-gray-700 hover:text-gray-900 dark:text-white dark:hover:text-white text-2xl font-medium"> Sayfa Ağacı</h3>
+                <h3 class="text-gray-700 hover:text-gray-900 dark:text-white dark:hover:text-white text-2xl font-medium"> Stratejik Plan Agacı</h3>
             </div>
             <ol class="flex items-center whitespace-nowrap min-w-0">
                 <li class="text-sm">
@@ -35,15 +69,17 @@
         </div>
         <!-- Page Header Close -->
         <!-- Start::row-1 -->
-        <div class="form-container" style="max-width: 400px; margin-right: 0 auto;">
-            <form action="/Admin/ProjectA/AddCategory/@Model.ProjectVM.ID" method="post">
-                <div class="col-span-12 lg:col-span-4">
+
+        <div class="grid grid-cols-12">
+            <div class="col-span-6">
+                <form action="/Admin/ProjectA/AddCategory/@Model.ProjectVM.ID" method="post">
+
                     <div class="box">
                         <div class="box-header">
-                            <h5 class="box-title">Bu Proje için Sayfa ekleme</h5>
+                            <h5 class="box-title">Bu Proje için stratejik plan yapısı oluşturun</h5>
                         </div>
                         <div class="box-body">
-                            <label for="input-label" class="ti-form-label">Sayfa</label>
+                            
                             <input type="text" class="ti-form-input" placeholder="Sayfa adı giriniz" required asp-for="@Model.AdminCategoryVM.Name">
 
                         </div>
@@ -51,27 +87,30 @@
                             <button type="submit" class="ti-btn ti-btn-primary">Ekle</button>
                         </div>
                     </div>
-                </div>
-            </form>
-        </div>
-        <div class="grid grid-cols-12 gap-6">
+                </form>
+
+            </div>
+
+
+
             <div class="col-span-6">
                 <div class="box">
-                    <div class="box-body">
-                        <h5>Sayfa Düzenleme</h5>
+
+                    <div class="box-header">
+                        <h5 class="box-title">İçindekiler</h5>
+                        <p class="box-subtitle">Stratejik planını buradan düzenleyebilirsiniz.</p>
                     </div>
                     <div id="projectTree" class="treeview">
+                        <!-- TreeView içeriği burada yüklenecek -->
                     </div>
                 </div>
             </div>
         </div>
-
         <!-- End::row-1 -->
-
     </div>
-    <!-- Start::main-content -->
-
 </div>
+<!-- Start::main-content -->
+
 
 
 
@@ -97,7 +136,7 @@
             var oldParent = data.old_parent;
             var newParent = data.parent;
             var movedNodeId = data.node.id
-            
+
 
             $.ajax({
                 url: '/Admin/Category/MoveCategory',
@@ -107,7 +146,7 @@
                     'id': movedNodeId,
                     'newParentId': newParent,
                     'oldParentId': oldParent
-                    
+
                 },
                 success: function (response) {
 
@@ -118,14 +157,16 @@
             });
         });
 
+       
+
         $('#projectTree').on('dblclick.jstree', function (e, data) {
             var category = $(e.target).closest("li");
-            var categoryID = category[0].id; 
-            
-            
+            var categoryID = category[0].id;
+
+
             window.location.href = '/Admin/Page/ChoosePageIndex/' + categoryID;
         });
-       
+
     });
 
 

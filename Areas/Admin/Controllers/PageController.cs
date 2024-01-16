@@ -41,23 +41,33 @@ namespace synto.Areas.Admin.Controllers
 
             Guid uniqueCode = Guid.NewGuid();
             string uniqueCodeString = uniqueCode.ToString();
-            var categoryID = (int)TempData["CategoryID"];
-            var category = _catMan.Find(categoryID);
+            
+            var category = _catMan.Find((int)TempData["CategoryID"]);
 
             var pages = _pMan.GetActives().Where(x => x.CategoryID == category.ID);
-           
             foreach (var item in model.Items)
             {
+                
+                if (pages.Any(p => p.ID == item.Id))
+                {
+                   var page = _pMan.Find(Convert.ToInt32(item.Id));
+                    page.Order = Convert.ToInt32(item.Order);
+                    _pMan.Update    (page);
+                    
+                }
+                else
+                {
+                    Page page = new Page();
+                    page.CategoryID = (int)TempData["CategoryID"];
+                    page.PageType = item.Id;
+                    page.Order = item.Order;
 
-                Page page = new Page();
-                page.CategoryID = (int)TempData["CategoryID"];
-                page.PageType = item.Id;
-                page.Order = item.Order;
-
-                page.PageUniqueCode = uniqueCodeString;
-                _pMan.Add(page);
-
+                    page.PageUniqueCode = uniqueCodeString;
+                    _pMan.Add(page);
+                }
             }
+
+           
 
 
             return View();

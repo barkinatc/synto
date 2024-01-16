@@ -12,14 +12,19 @@ namespace synto.Areas.Admin.Controllers
 
     public class MissionController : Controller
     {
-       private readonly IMissionManager _missionManager;
+        private readonly IMissionManager _missionManager;
         private readonly IInstitutionManager _institutionManager;
         private readonly ICategoryManager _categoryManager;
         private readonly IPageManager _pageManager;
         private readonly IProjectAManager _proMan;
+        private readonly IImageManager _imgMan;
+        private readonly IContentManager _contentMan;
+        private readonly IDataManager _dataMan;
+        private readonly IAppUserManager _userMan;
         private readonly UserManager<AppUser> _userManager;
         private readonly SignInManager<AppUser> _signInManager;
-        public MissionController(IMissionManager missionManager, IInstitutionManager institutionManager, ICategoryManager categoryManager, IPageManager pageManager, IProjectAManager proMan, UserManager<AppUser> userManager, SignInManager<AppUser> signInManager)
+
+        public MissionController(IMissionManager missionManager, IInstitutionManager institutionManager, ICategoryManager categoryManager, IPageManager pageManager, IProjectAManager proMan, UserManager<AppUser> userManager, SignInManager<AppUser> signInManager, IImageManager imgMan, IContentManager contentMan, IDataManager dataMan, IAppUserManager userMan)
         {
             _missionManager = missionManager;
             _institutionManager = institutionManager;
@@ -28,6 +33,11 @@ namespace synto.Areas.Admin.Controllers
             _proMan = proMan;
             _userManager = userManager;
             _signInManager = signInManager;
+            _imgMan = imgMan;
+            _contentMan = contentMan;
+            _dataMan = dataMan;
+            _userMan = userMan;
+
         }
 
         public IActionResult ChooseProject()
@@ -58,22 +68,30 @@ namespace synto.Areas.Admin.Controllers
                 }).ToList();
 
                 List<AdminTreeViewVM> nodes = new List<AdminTreeViewVM>();
-                char letter = 'A';
                 int number = 1;
+                char letter = 'A';
+                string currentParentID = null;
 
                 foreach (var item in listCategories)
                 {
                     string label;
                     if (item.ParentID == null || item.ParentID == "")
                     {
-                        label = letter.ToString();
-                        letter++;
-                        if (letter > 'Z') letter = 'A';
+                        label = number.ToString();
+                        number++;
+                        currentParentID = item.ID.ToString();
+                        letter = 'A'; // Ana kategori değiştiğinde harf sıralamasını sıfırla
                     }
                     else
                     {
-                        label = number.ToString();
-                        number++;
+                        if (currentParentID != item.ParentID)
+                        {
+                            letter = 'A'; // Ana kategori değiştiğinde harf sıralamasını sıfırla
+                        }
+
+                        label = letter.ToString();
+                        letter++;
+                        if (letter > 'Z') letter = 'Z';
                     }
 
                     nodes.Add(new AdminTreeViewVM
@@ -100,8 +118,22 @@ namespace synto.Areas.Admin.Controllers
         public IActionResult AssignMission(int id)
         {
 
+            List<MissionVM> missions = _missionManager.GetActives().Select(x => new MissionVM
+            {
+                ID = x.ID,
+                PageID = x.PageID,
+                CategoryID = x.CategoryID
 
+            }).ToList();
 
+            List<AppUserVM> users = _userMan.GetActives().Select(x => new AppUserVM
+            {
+                ID = x.id,
+                Name = x.Name,
+                Surname = x.Surname,
+                InstitutionID = x.InstitutionID,
+                Mail = x.Email
+            }).ToList();
             var category = _categoryManager.Find(id);
 
             if (category != null)
@@ -118,7 +150,8 @@ namespace synto.Areas.Admin.Controllers
                     CategoryID = x.CategoryID,
                     PageType = x.PageType,
                     Order = x.Order,
-                    InstitutionID = x.InstitutionID
+                    InstitutionID = x.InstitutionID,
+                    InstitutionName =x.Institution.Name
 
                 }).ToList();
 
@@ -126,7 +159,8 @@ namespace synto.Areas.Admin.Controllers
                 assign.CreateMission.CategoryID = category.ID;
                 assign.InstitutionVMs = institutions;
                 assign.PageVMs = pages;
-
+                assign.Missions = missions;
+                assign.Users = users;
                 return View(assign);
 
 
@@ -148,7 +182,7 @@ namespace synto.Areas.Admin.Controllers
             {
                 foreach (var item in missions)
                 {
-                    if (item.PageID != p.selectedDivID || item.CategoryID != p.CreateMission.CategoryID || item.InstitutionID != p.CreateMission.InstitutionID)
+                    if (item.PageID != p.selectedDivID)
                     {
                         Mission mi = new Mission();
                         mi.PageID = p.selectedDivID;
@@ -160,9 +194,10 @@ namespace synto.Areas.Admin.Controllers
                         _pageManager.Update(pa);
                         _missionManager.Add(mi);
 
-                        return Redirect("/Admin/");
+                        return Redirect("/Admin/Mission/AssignTask");
 
                     }
+                    break;
                 }
             }
             else
@@ -198,6 +233,16 @@ namespace synto.Areas.Admin.Controllers
                 var user = await _userManager.FindByNameAsync(userName);
                 if (user != null)
                 {
+                    var institutions = _institutionManager.GetActives();
+
+                    foreach (var item in institutions)
+                    {
+                        if (item.ID ==user.InstitutionID)
+                        {
+                            ViewBag.InstitutionName = item.Name;
+                        }
+                    }
+                    
                     List<MissionVM> missions = _missionManager.Where(x => x.InstitutionID == user.InstitutionID).Select(x => new MissionVM
                     {
                         ID = x.ID,
@@ -206,7 +251,10 @@ namespace synto.Areas.Admin.Controllers
                         CategoryID = x.CategoryID,
                         CategoryName = x.Category.Name,
                         PageType = x.Page.PageType,
-                        PageOrder = x.Page.Order
+                        PageOrder = x.Page.Order,
+                        MissionName =x.MissionName,
+                        Status =x.Status,
+                        CreatedDate =x.CreatedDate.ToString()
                     }).ToList();
                     List<AdminPageVM> pages = _pageManager.GetActives().Select(x => new AdminPageVM
                     {
@@ -220,12 +268,14 @@ namespace synto.Areas.Admin.Controllers
                     //    Name = x.Name 
                     //}).ToList();
                     MissionPageVM pageVM = new MissionPageVM { Missions = missions, Pages = pages };
+                   
+                    
                     return View(pageVM);
 
                 }
                 return View();
             }
-
+            ViewBag.EmptyUser = "Kullanıcı bulunamadı.. ";
             return View();
 
 
@@ -245,14 +295,14 @@ namespace synto.Areas.Admin.Controllers
                     var category = _categoryManager.Find(id);
                     if (category != null)
                     {
-                        List<AdminPageVM> pages = _pageManager.Where(x => x.CategoryID == category.ID ).Select(x => new AdminPageVM
+                        List<AdminPageVM> pages = _pageManager.Where(x => x.CategoryID == category.ID).Select(x => new AdminPageVM
                         {
-                            ID= x.ID,
+                            ID = x.ID,
 
                             CategoryID = x.CategoryID,
                             PageType = x.PageType,
                             Order = x.Order,
-                            InstitutionID =x.InstitutionID
+                            InstitutionID = x.InstitutionID
                         }).ToList();
                         AppUserVM appUser = new AppUserVM();
                         appUser.ID = user.Id;
@@ -276,48 +326,40 @@ namespace synto.Areas.Admin.Controllers
 
         public async Task<IActionResult> CreatePage(MissionCreatePage p)
         {
+            if (p.Image != null)
+            {
+                var imagePath = Path.Combine("wwwroot/assets/img/gallery/", p.Image.FileName);
+                using (var stream = new FileStream(imagePath, FileMode.Create))
+                {
+                    await p.Image.CopyToAsync(stream);
+                }
 
-            //if (p.CreatePageVM != null)
-            //{
-            //    Page page = new Page();
+                Image image = new Image();
 
-            //    foreach (var item in p.CreatePageVM.TextAreas)
-            //    {
-            //        Content content = new Content
-            //        {
-            //            PageID = page.ID,
-            //            Text = item
-            //        };
-            //        page.Contents.Add(content);
-            //    }
-
-            //    foreach (var item in p.CreatePageVM.Images)
-            //    {
-            //        if (item.Length > 0 && item != null)
-            //        {
-            //            var imagePath = Path.Combine("wwwroot/assets/img/gallery/", item.FileName);
-            //            using (var stream = new FileStream(imagePath, FileMode.Create))
-            //            {
-            //                await item.CopyToAsync(stream);
-            //            }
+                image.ImagePath = imagePath;
+                image.PageID = Convert.ToInt32(p.itemId);
+                _imgMan.Add(image);
 
 
-            //            Image image = new Image
 
-            //            {
-            //                ImagePath = imagePath,
-            //                PageID = page.ID
+            }
+            if (p.TextArea != null)
+            {
+                Content content = new Content();
 
-            //            };
-            //            page.Images.Add(image);
-            //        }
+                content.PageID = Convert.ToInt32(p.itemId);
+                content.Text = p.TextArea;
+                _contentMan.Add(content);
 
-            //    }
 
-            //    page.CategoryID = (int)TempData["CategoryID"];
-            //    _pMan.Add(page);
-
-            //}
+            }
+            if (p.DataInput != null)
+            {
+                Data data = new Data();
+                data.Content = p.DataInput;
+                _dataMan.Add(data);
+            }
+           
 
             return View();
 

@@ -42,67 +42,9 @@
         <!-- End::row-1 -->
 
         
-        <!-- Start::main-content -->
-        <div class="form-container" style="max-width: 400px; margin-right: 0 auto;">
-    <form action="/Admin/Category/AddCategory" method="post">
-        <div class="col-span-12 lg:col-span-4">
-            <div class="box">
-                <div class="box-header">
-                    <h5 class="box-title">Sayfa ekleme</h5>
-                </div>
-                <div class="box-body">
-                    <label for="input-label" class="ti-form-label">Sayfa</label>
-                    <input type="text" class="ti-form-input" placeholder="Sayfa adı giriniz" required asp-for="@Model.AdminCategoryVM.Name">
-                    
-                </div>
-                <div>
-                    <button type="submit" class="ti-btn ti-btn-primary">Ekle</button>
-                </div>
-            </div>
-        </div>
-    </form>
-</div>
+    
 
-       @*  <div class="content-table">
-            <h2>İÇİNDEKİLER</h2>
-            <ul>
-                <li><span>1. GİRİŞ</span> <span class="page-number">8</span></li>
-                <ul>
-                    <li><span>A. Kamuda Stratejik Planlamanın Hukuki Çerçevesi</span> <span class="page-number">8</span></li>
-                    <li><span>B. Belediyelerde Stratejik Planlamanın Önemi</span> <span class="page-number">9</span></li>
-                </ul>
-                <li><span>2. STRATEJİK PLAN HAZIRLIK SÜRECİ</span> <span class="page-number">10</span></li>
-                <ul>
-                    <li><span>A. Hazırlık ve Altyapı Çalışmaları</span> <span class="page-number">10</span></li>
-                    <li><span>B. Planlama Sürecinin Organizasyonu ve Hazırlık Programı</span> <span class="page-number">11</span></li>
-                </ul>
-                <!-- Diğer bölümler aynı yapıda eklenir -->
-            </ul>
-        </div> *@
-
-        <!-- Start::row-1 -->
-    @*     <div class="grid grid-cols-12 gap-6">
-            <div class="col-span-12 lg:col-span-4">
-                <div class="box">
-                    <div class="box-body">
-                        <div class="gap-4 grid" id="drag-left">
-                            @foreach (var item in Model.AdminCategoryVMs)
-                            {
-                                <div class="box mb-0 draggable-category" draggable="true" data-id="@item.ID">
-                                    <div class="box-body">
-                                        @item.Name
-                                    </div>
-                                </div>
-                            }
-                                               
-                        </div>
-                    </div>
-                </div>
-            </div>
-         
-        </div> *@
-      
-        <!-- End::row-1 -->
+   
 
 
         <div class="grid grid-cols-12 gap-6">
@@ -119,7 +61,7 @@
                                         <th scope="col">Sayfa adı</th>
                                         
                                         <th scope="col" class="!text-end">Action</th>
-                                        <th scope="col" class="!text-end">Action</th>
+                                       
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -127,9 +69,9 @@
                                     {
                                         <tr>
                                             <td class="font-medium">@item.Name</td>
-                                           
+
                                             <td class="text-end font-medium">
-                                                <a class="text-warning hover:text-primary" href="javascript:void(0);">Proje Agacı Oluştur</a>
+                                                <a class="text-warning hover:text-primary" href="/Admin/Category/UpdateCategory/@item.ID">Güncelle</a>
                                             </td>
                                             <td class="text-end font-medium">
                                                 <a class="text-danger hover:text-primary" href="/Admin/Category/DeleteCategory/@item.ID">Sil</a>
