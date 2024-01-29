@@ -14,5 +14,7 @@ namespace Project.ENTITIES.Models
         //Relational prop
 
         public virtual List<Category> Categories { get; set; }
+        public virtual List<Dart> Darts { get; set; }
+
     }
 }

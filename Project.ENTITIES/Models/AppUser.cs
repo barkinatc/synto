@@ -31,5 +31,9 @@ namespace Project.ENTITIES.Models
         }
         //Relational Properties 
         public virtual Institution Institution { get; set; }
+        public virtual List<MissionAppUser> MissionAppUsers { get; set; }
+        public virtual List<PageAppUser> PageAppUsers { get; set; }
+        public virtual List<Dart> Dart { get; set; }
+
     }
 }

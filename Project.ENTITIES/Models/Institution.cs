@@ -11,10 +11,14 @@ namespace Project.ENTITIES.Models
     {
         public string Name { get; set; }
         public string? Description { get; set; }
+        public int? DartID { get; set; }
 
         //Relational Properties 
-        public virtual List<Mission> Missions  { get; set; }
         public virtual List<AppUser> AppUsers  { get; set; }
-        public virtual List<Page> Pages  { get; set; }
+      
+        public virtual List<PageInstitution> PageInstitutions { get; set; }
+        public virtual List<MissionInstitution> MissionInstitutions { get; set; }
+        public virtual List<Indicator> Indicators { get; set; }
+        public virtual Dart Dart  { get; set; }
     }
 }

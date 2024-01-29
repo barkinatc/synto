@@ -30,6 +30,14 @@ namespace Project.BLL.ServiceInjections
             services.AddScoped<IContentRepositoryDal, ContentRepositoryDal>();
             services.AddScoped<IDataRepositoryDal, DataRepositoryDal>();
             services.AddScoped<IMissionRepositoryDal, MissionRepositoryDal>();
+            services.AddScoped<IDartRepositoryDal, DartRepositoryDal>();
+            services.AddScoped<IPageAppUserRepositoryDal, PageAppUserRepositoryDal>();
+            services.AddScoped<IPageInstitutionRepositoryDal, PageInstitutionRepositoryDal>();
+            services.AddScoped<IIndicatorRepositoryDal, IndicatorRepositoryDal>();
+            services.AddScoped<IDartIndicatorRepositoryDal, DartIndicatorRepositoryDal>();
+            services.AddScoped<IMissionAppUserRepositoryDal, MissionAppUserRepositoryDal>();
+            services.AddScoped<IMissionInstitutionRepositoryDal, MissionInstitutionRepositoryDal>();
+            services.AddScoped<ICategoryRevizyonRepositoryDal, CategoryRevizyonRepositoryDal>();
 
 
             //Addscoped
@@ -45,6 +53,14 @@ namespace Project.BLL.ServiceInjections
             services.AddScoped<IImageManager, ImageManager>();
             services.AddScoped<IDataManager, DataManager>();
             services.AddScoped<IMissionManager, MissionManager>();
+            services.AddScoped<IDartManager, DartManager>();
+            services.AddScoped<IPageAppUserManager, PageAppUserManager>();
+            services.AddScoped<IPageInstitutionManager, PageInstitutionManager>();
+            services.AddScoped<IIndicatorManager, IndicatorManager>();
+            services.AddScoped<IDartIndicatorManager, DartIndicatorManager>();
+            services.AddScoped<IMissionAppUserManager, MissionAppUserManager>();
+            services.AddScoped<IMissionInstitutionManager, MissionInstitutionManager>();
+            services.AddScoped<ICategoryRevizyonManager, CategoryRevizyonManager>();
 
 
 

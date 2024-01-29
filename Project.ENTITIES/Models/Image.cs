@@ -11,11 +11,12 @@ namespace Project.ENTITIES.Models
     {
         public string? ImagePath { get; set; }
 
-        public int? PageID { get; set; }
+        public int? CategoryID { get; set; }
+
 
         //Relational Properties 
 
-        public virtual Page Page { get; set; }
+        public virtual Category     Category { get; set; }
 
     }
 }

@@ -266,6 +266,9 @@ namespace Project.DAL.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
+                    b.Property<string>("AllTimeUsers")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2")
                         .HasColumnName("CreatedDate");
@@ -273,7 +276,7 @@ namespace Project.DAL.Migrations
                     b.Property<DateTime?>("DeletedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Desciption")
+                    b.Property<string>("EditorContent")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("ModifiedDate")
@@ -292,11 +295,51 @@ namespace Project.DAL.Migrations
                     b.Property<int>("Status")
                         .HasColumnType("int");
 
+                    b.Property<string>("UserName")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("ID");
 
                     b.HasIndex("ProjectAID");
 
                     b.ToTable("Categories");
+                });
+
+            modelBuilder.Entity("Project.ENTITIES.Models.CategoryRevizyon", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<int?>("CategoryID")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("CreatedDate");
+
+                    b.Property<DateTime?>("DeletedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("EditorContent")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ModifiedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ModifiedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("CategoryID");
+
+                    b.ToTable("CategoryRevizyons");
                 });
 
             modelBuilder.Entity("Project.ENTITIES.Models.Content", b =>
@@ -307,6 +350,9 @@ namespace Project.DAL.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
+                    b.Property<int?>("CategoryID")
+                        .HasColumnType("int");
+
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2")
                         .HasColumnName("CreatedDate");
@@ -316,9 +362,6 @@ namespace Project.DAL.Migrations
 
                     b.Property<DateTime?>("ModifiedDate")
                         .HasColumnType("datetime2");
-
-                    b.Property<int?>("PageID")
-                        .HasColumnType("int");
 
                     b.Property<int>("Status")
                         .HasColumnType("int");
@@ -331,9 +374,100 @@ namespace Project.DAL.Migrations
 
                     b.HasKey("ID");
 
-                    b.HasIndex("PageID");
+                    b.HasIndex("CategoryID");
 
                     b.ToTable("Contents");
+                });
+
+            modelBuilder.Entity("Project.ENTITIES.Models.Dart", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<string>("Amac")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("AppUserID")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("CreatedDate");
+
+                    b.Property<DateTime?>("DeletedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("FaaliyetVeProjeler")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Hedef")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Ihtiyaclar")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("MaliyetTahmini")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("ModifiedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("ProjectID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Riskler")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SorumluBirim")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("SorumluBirimID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Tespitler")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("AppUserID");
+
+                    b.HasIndex("ProjectID");
+
+                    b.ToTable("Dart");
+                });
+
+            modelBuilder.Entity("Project.ENTITIES.Models.DartIndicator", b =>
+                {
+                    b.Property<int?>("DartID")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("IndicatorID")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("CreatedDate");
+
+                    b.Property<DateTime?>("DeletedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("ModifiedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.HasKey("DartID", "IndicatorID");
+
+                    b.HasIndex("IndicatorID");
+
+                    b.ToTable("DartIndicators");
                 });
 
             modelBuilder.Entity("Project.ENTITIES.Models.Data", b =>
@@ -343,6 +477,9 @@ namespace Project.DAL.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<int?>("CategoryID")
+                        .HasColumnType("int");
 
                     b.Property<string>("Content")
                         .HasColumnType("nvarchar(max)");
@@ -357,9 +494,6 @@ namespace Project.DAL.Migrations
                     b.Property<DateTime?>("ModifiedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("PageID")
-                        .HasColumnType("int");
-
                     b.Property<int>("Status")
                         .HasColumnType("int");
 
@@ -368,7 +502,7 @@ namespace Project.DAL.Migrations
 
                     b.HasKey("ID");
 
-                    b.HasIndex("PageID");
+                    b.HasIndex("CategoryID");
 
                     b.ToTable("Datas");
                 });
@@ -380,6 +514,9 @@ namespace Project.DAL.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<int?>("CategoryID")
+                        .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2")
@@ -394,17 +531,78 @@ namespace Project.DAL.Migrations
                     b.Property<DateTime?>("ModifiedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("PageID")
-                        .HasColumnType("int");
-
                     b.Property<int>("Status")
                         .HasColumnType("int");
 
                     b.HasKey("ID");
 
-                    b.HasIndex("PageID");
+                    b.HasIndex("CategoryID");
 
                     b.ToTable("Images");
+                });
+
+            modelBuilder.Entity("Project.ENTITIES.Models.Indicator", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("CreatedDate");
+
+                    b.Property<DateTime?>("DeletedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("HedefeEtkisiYuzde")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("IS")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("InstitutionID")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime?>("ModifiedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("Name")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("PlanDonemiBaslangicDegeri")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("RS")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Unit")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Yirmi20")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Yirmi21")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Yirmi22")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Yirmi23")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Yirmi24")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("InstitutionID");
+
+                    b.ToTable("Indicators");
                 });
 
             modelBuilder.Entity("Project.ENTITIES.Models.Institution", b =>
@@ -418,6 +616,9 @@ namespace Project.DAL.Migrations
                     b.Property<DateTime>("CreatedDate")
                         .HasColumnType("datetime2")
                         .HasColumnName("CreatedDate");
+
+                    b.Property<int?>("DartID")
+                        .HasColumnType("int");
 
                     b.Property<DateTime?>("DeletedDate")
                         .HasColumnType("datetime2");
@@ -437,6 +638,8 @@ namespace Project.DAL.Migrations
 
                     b.HasKey("ID");
 
+                    b.HasIndex("DartID");
+
                     b.ToTable("Institutions");
                 });
 
@@ -455,11 +658,14 @@ namespace Project.DAL.Migrations
                         .HasColumnType("datetime2")
                         .HasColumnName("CreatedDate");
 
+                    b.Property<int?>("DartID")
+                        .HasColumnType("int");
+
                     b.Property<DateTime?>("DeletedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("InstitutionID")
-                        .HasColumnType("int");
+                    b.Property<DateTime?>("EndDate")
+                        .HasColumnType("datetime2");
 
                     b.Property<string>("MissionName")
                         .IsRequired()
@@ -471,18 +677,81 @@ namespace Project.DAL.Migrations
                     b.Property<int?>("PageID")
                         .HasColumnType("int");
 
+                    b.Property<DateTime?>("StartDate")
+                        .HasColumnType("datetime2");
+
                     b.Property<int>("Status")
                         .HasColumnType("int");
+
+                    b.Property<string>("Subject")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
 
                     b.HasIndex("CategoryID");
 
-                    b.HasIndex("InstitutionID");
+                    b.HasIndex("DartID");
 
                     b.HasIndex("PageID");
 
                     b.ToTable("Missions");
+                });
+
+            modelBuilder.Entity("Project.ENTITIES.Models.MissionAppUser", b =>
+                {
+                    b.Property<int?>("AppUserID")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("MissionID")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("CreatedDate");
+
+                    b.Property<DateTime?>("DeletedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("ModifiedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.HasKey("AppUserID", "MissionID");
+
+                    b.HasIndex("MissionID");
+
+                    b.ToTable("MissionAppUsers");
+                });
+
+            modelBuilder.Entity("Project.ENTITIES.Models.MissionInstitution", b =>
+                {
+                    b.Property<int?>("MissionID")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("InstitutionID")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("CreatedDate");
+
+                    b.Property<DateTime?>("DeletedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("ModifiedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.HasKey("MissionID", "InstitutionID");
+
+                    b.HasIndex("InstitutionID");
+
+                    b.ToTable("MissionInstitutions");
                 });
 
             modelBuilder.Entity("Project.ENTITIES.Models.Page", b =>
@@ -503,20 +772,11 @@ namespace Project.DAL.Migrations
                     b.Property<DateTime?>("DeletedDate")
                         .HasColumnType("datetime2");
 
-                    b.Property<int?>("InstitutionID")
-                        .HasColumnType("int");
+                    b.Property<string>("EditorContent")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("ModifiedDate")
                         .HasColumnType("datetime2");
-
-                    b.Property<int?>("Order")
-                        .HasColumnType("int");
-
-                    b.Property<int?>("PageType")
-                        .HasColumnType("int");
-
-                    b.Property<string>("PageUniqueCode")
-                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("Status")
                         .HasColumnType("int");
@@ -525,9 +785,63 @@ namespace Project.DAL.Migrations
 
                     b.HasIndex("CategoryID");
 
+                    b.ToTable("Pages");
+                });
+
+            modelBuilder.Entity("Project.ENTITIES.Models.PageAppUser", b =>
+                {
+                    b.Property<int?>("PageID")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("AppUserID")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("CreatedDate");
+
+                    b.Property<DateTime?>("DeletedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("ModifiedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.HasKey("PageID", "AppUserID");
+
+                    b.HasIndex("AppUserID");
+
+                    b.ToTable("PageAppUsers");
+                });
+
+            modelBuilder.Entity("Project.ENTITIES.Models.PageInstitution", b =>
+                {
+                    b.Property<int?>("PageID")
+                        .HasColumnType("int");
+
+                    b.Property<int?>("InstitutionID")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedDate")
+                        .HasColumnType("datetime2")
+                        .HasColumnName("CreatedDate");
+
+                    b.Property<DateTime?>("DeletedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<DateTime?>("ModifiedDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
+                    b.HasKey("PageID", "InstitutionID");
+
                     b.HasIndex("InstitutionID");
 
-                    b.ToTable("Pages");
+                    b.ToTable("PageInstitutions");
                 });
 
             modelBuilder.Entity("Project.ENTITIES.Models.ProjectA", b =>
@@ -663,31 +977,92 @@ namespace Project.DAL.Migrations
                     b.Navigation("ProjectA");
                 });
 
+            modelBuilder.Entity("Project.ENTITIES.Models.CategoryRevizyon", b =>
+                {
+                    b.HasOne("Project.ENTITIES.Models.Category", "Category")
+                        .WithMany("CategoryRevizyons")
+                        .HasForeignKey("CategoryID");
+
+                    b.Navigation("Category");
+                });
+
             modelBuilder.Entity("Project.ENTITIES.Models.Content", b =>
                 {
-                    b.HasOne("Project.ENTITIES.Models.Page", "Page")
+                    b.HasOne("Project.ENTITIES.Models.Category", "Category")
                         .WithMany("Contents")
-                        .HasForeignKey("PageID");
+                        .HasForeignKey("CategoryID");
 
-                    b.Navigation("Page");
+                    b.Navigation("Category");
+                });
+
+            modelBuilder.Entity("Project.ENTITIES.Models.Dart", b =>
+                {
+                    b.HasOne("Project.ENTITIES.Models.AppUser", "AppUser")
+                        .WithMany("Dart")
+                        .HasForeignKey("AppUserID");
+
+                    b.HasOne("Project.ENTITIES.Models.ProjectA", "Project")
+                        .WithMany("Darts")
+                        .HasForeignKey("ProjectID");
+
+                    b.Navigation("AppUser");
+
+                    b.Navigation("Project");
+                });
+
+            modelBuilder.Entity("Project.ENTITIES.Models.DartIndicator", b =>
+                {
+                    b.HasOne("Project.ENTITIES.Models.Dart", "Dart")
+                        .WithMany("DartIndicators")
+                        .HasForeignKey("DartID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Project.ENTITIES.Models.Indicator", "Indicator")
+                        .WithMany("DartIndicators")
+                        .HasForeignKey("IndicatorID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Dart");
+
+                    b.Navigation("Indicator");
                 });
 
             modelBuilder.Entity("Project.ENTITIES.Models.Data", b =>
                 {
-                    b.HasOne("Project.ENTITIES.Models.Page", "Page")
+                    b.HasOne("Project.ENTITIES.Models.Category", "Category")
                         .WithMany("Datas")
-                        .HasForeignKey("PageID");
+                        .HasForeignKey("CategoryID");
 
-                    b.Navigation("Page");
+                    b.Navigation("Category");
                 });
 
             modelBuilder.Entity("Project.ENTITIES.Models.Image", b =>
                 {
-                    b.HasOne("Project.ENTITIES.Models.Page", "Page")
+                    b.HasOne("Project.ENTITIES.Models.Category", "Category")
                         .WithMany("Images")
-                        .HasForeignKey("PageID");
+                        .HasForeignKey("CategoryID");
 
-                    b.Navigation("Page");
+                    b.Navigation("Category");
+                });
+
+            modelBuilder.Entity("Project.ENTITIES.Models.Indicator", b =>
+                {
+                    b.HasOne("Project.ENTITIES.Models.Institution", "Institution")
+                        .WithMany("Indicators")
+                        .HasForeignKey("InstitutionID");
+
+                    b.Navigation("Institution");
+                });
+
+            modelBuilder.Entity("Project.ENTITIES.Models.Institution", b =>
+                {
+                    b.HasOne("Project.ENTITIES.Models.Dart", "Dart")
+                        .WithMany("Institutions")
+                        .HasForeignKey("DartID");
+
+                    b.Navigation("Dart");
                 });
 
             modelBuilder.Entity("Project.ENTITIES.Models.Mission", b =>
@@ -696,9 +1071,9 @@ namespace Project.DAL.Migrations
                         .WithMany("Missions")
                         .HasForeignKey("CategoryID");
 
-                    b.HasOne("Project.ENTITIES.Models.Institution", "Institution")
+                    b.HasOne("Project.ENTITIES.Models.Dart", "Dart")
                         .WithMany("Missions")
-                        .HasForeignKey("InstitutionID");
+                        .HasForeignKey("DartID");
 
                     b.HasOne("Project.ENTITIES.Models.Page", "Page")
                         .WithMany("Missions")
@@ -706,24 +1081,94 @@ namespace Project.DAL.Migrations
 
                     b.Navigation("Category");
 
-                    b.Navigation("Institution");
+                    b.Navigation("Dart");
 
                     b.Navigation("Page");
+                });
+
+            modelBuilder.Entity("Project.ENTITIES.Models.MissionAppUser", b =>
+                {
+                    b.HasOne("Project.ENTITIES.Models.AppUser", "AppUser")
+                        .WithMany("MissionAppUsers")
+                        .HasForeignKey("AppUserID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Project.ENTITIES.Models.Mission", "Mission")
+                        .WithMany("MissionAppUsers")
+                        .HasForeignKey("MissionID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AppUser");
+
+                    b.Navigation("Mission");
+                });
+
+            modelBuilder.Entity("Project.ENTITIES.Models.MissionInstitution", b =>
+                {
+                    b.HasOne("Project.ENTITIES.Models.Institution", "Institution")
+                        .WithMany("MissionInstitutions")
+                        .HasForeignKey("InstitutionID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Project.ENTITIES.Models.Mission", "Mission")
+                        .WithMany("MissionInstitutions")
+                        .HasForeignKey("MissionID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Institution");
+
+                    b.Navigation("Mission");
                 });
 
             modelBuilder.Entity("Project.ENTITIES.Models.Page", b =>
                 {
                     b.HasOne("Project.ENTITIES.Models.Category", "Category")
-                        .WithMany("Pages")
+                        .WithMany()
                         .HasForeignKey("CategoryID");
 
-                    b.HasOne("Project.ENTITIES.Models.Institution", "Institution")
-                        .WithMany("Pages")
-                        .HasForeignKey("InstitutionID");
-
                     b.Navigation("Category");
+                });
+
+            modelBuilder.Entity("Project.ENTITIES.Models.PageAppUser", b =>
+                {
+                    b.HasOne("Project.ENTITIES.Models.AppUser", "AppUser")
+                        .WithMany("PageAppUsers")
+                        .HasForeignKey("AppUserID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Project.ENTITIES.Models.Page", "Page")
+                        .WithMany("PageAppUsers")
+                        .HasForeignKey("PageID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("AppUser");
+
+                    b.Navigation("Page");
+                });
+
+            modelBuilder.Entity("Project.ENTITIES.Models.PageInstitution", b =>
+                {
+                    b.HasOne("Project.ENTITIES.Models.Institution", "Institution")
+                        .WithMany("PageInstitutions")
+                        .HasForeignKey("InstitutionID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Project.ENTITIES.Models.Page", "Page")
+                        .WithMany("PageInstitutions")
+                        .HasForeignKey("PageID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Institution");
+
+                    b.Navigation("Page");
                 });
 
             modelBuilder.Entity("Project.ENTITIES.Models.SubCategory", b =>
@@ -735,26 +1180,19 @@ namespace Project.DAL.Migrations
                     b.Navigation("Category");
                 });
 
+            modelBuilder.Entity("Project.ENTITIES.Models.AppUser", b =>
+                {
+                    b.Navigation("Dart");
+
+                    b.Navigation("MissionAppUsers");
+
+                    b.Navigation("PageAppUsers");
+                });
+
             modelBuilder.Entity("Project.ENTITIES.Models.Category", b =>
                 {
-                    b.Navigation("Missions");
+                    b.Navigation("CategoryRevizyons");
 
-                    b.Navigation("Pages");
-
-                    b.Navigation("SubCategories");
-                });
-
-            modelBuilder.Entity("Project.ENTITIES.Models.Institution", b =>
-                {
-                    b.Navigation("AppUsers");
-
-                    b.Navigation("Missions");
-
-                    b.Navigation("Pages");
-                });
-
-            modelBuilder.Entity("Project.ENTITIES.Models.Page", b =>
-                {
                     b.Navigation("Contents");
 
                     b.Navigation("Datas");
@@ -762,11 +1200,56 @@ namespace Project.DAL.Migrations
                     b.Navigation("Images");
 
                     b.Navigation("Missions");
+
+                    b.Navigation("SubCategories");
+                });
+
+            modelBuilder.Entity("Project.ENTITIES.Models.Dart", b =>
+                {
+                    b.Navigation("DartIndicators");
+
+                    b.Navigation("Institutions");
+
+                    b.Navigation("Missions");
+                });
+
+            modelBuilder.Entity("Project.ENTITIES.Models.Indicator", b =>
+                {
+                    b.Navigation("DartIndicators");
+                });
+
+            modelBuilder.Entity("Project.ENTITIES.Models.Institution", b =>
+                {
+                    b.Navigation("AppUsers");
+
+                    b.Navigation("Indicators");
+
+                    b.Navigation("MissionInstitutions");
+
+                    b.Navigation("PageInstitutions");
+                });
+
+            modelBuilder.Entity("Project.ENTITIES.Models.Mission", b =>
+                {
+                    b.Navigation("MissionAppUsers");
+
+                    b.Navigation("MissionInstitutions");
+                });
+
+            modelBuilder.Entity("Project.ENTITIES.Models.Page", b =>
+                {
+                    b.Navigation("Missions");
+
+                    b.Navigation("PageAppUsers");
+
+                    b.Navigation("PageInstitutions");
                 });
 
             modelBuilder.Entity("Project.ENTITIES.Models.ProjectA", b =>
                 {
                     b.Navigation("Categories");
+
+                    b.Navigation("Darts");
                 });
 #pragma warning restore 612, 618
         }

@@ -30,6 +30,14 @@ namespace Project.DAL.Context
             builder.ApplyConfiguration(new ImageConfiguration());
             builder.ApplyConfiguration(new ContentConfiguration());
             builder.ApplyConfiguration(new MissionConfiguration());
+            builder.ApplyConfiguration(new PageAppUserConfiguration());
+            builder.ApplyConfiguration(new PageInstitutionConfiguration());
+            builder.ApplyConfiguration(new DartConfiguration());
+            builder.ApplyConfiguration(new IndicatorConfiguration());
+            builder.ApplyConfiguration(new DartIndicatorConfiguration());
+            builder.ApplyConfiguration(new MissionAppUserConfiguration());
+            builder.ApplyConfiguration(new MissionInstitutionConfiguration());
+            builder.ApplyConfiguration(new CategoryRevizyonConfiguration());
 
         }
 
@@ -44,6 +52,14 @@ namespace Project.DAL.Context
         public DbSet<Image> Images { get; set; }
         public DbSet<Data> Datas { get; set; }
         public DbSet<Mission> Missions { get; set; }
+        public DbSet<PageAppUser> PageAppUsers { get; set; }
+        public DbSet<PageInstitution> PageInstitutions { get; set; }
+        public DbSet<MissionInstitution> MissionInstitutions { get; set; }
+        public DbSet<Dart> Dart { get; set; }
+        public DbSet<Indicator> Indicators { get; set; }
+        public DbSet<DartIndicator> DartIndicators { get; set; }
+        public DbSet<MissionAppUser> MissionAppUsers { get; set; }
+        public DbSet<CategoryRevizyon> CategoryRevizyons { get; set; }
 
 
     }
